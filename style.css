@@ -1,0 +1,297 @@
+/* --- IMPOSTAZIONI GENERALI --- */
+:root {
+    --bg-color: #f4f4f2;
+    --primary-accent-color: #E1A141; /* Nuovo colore ORO */
+    --text-color: #2c2c2c;
+    --card-bg-color: #ffffff;
+    --header-bg-color: #1a1a1a; /* Header NERO */
+    --header-height: 70px;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+main {
+    padding: 1rem;
+    padding-top: 1rem; /* Rimosso spazio extra, gestito dal JS */
+}
+
+/* --- HEADER, BANNER E NAVIGAZIONE (STICKY) --- */
+#sticky-header-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: top 0.4s ease-in-out;
+}
+#main-header {
+    background-color: var(--header-bg-color);
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+}
+.logo {
+    max-height: 50px;
+    width: auto;
+}
+#contact-banner {
+    background-color: #f8f8f8;
+    padding: 0.8rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    transition: all 0.4s ease-in-out;
+    max-height: 100px;
+}
+body.scrolled #contact-banner {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: none;
+    overflow: hidden;
+    opacity: 0;
+}
+#closed-banner-message p {
+    margin: 0 0 0.5rem 0;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #25D366;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Navigazione Orizzontale con Sfumature Dinamiche */
+#category-navigator-container {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: relative;
+}
+#category-navigator-container::before,
+#category-navigator-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+#category-navigator-container::before {
+    left: 0;
+    background: linear-gradient(to left, transparent, white);
+}
+#category-navigator-container.is-scrolled-start::before {
+    opacity: 1;
+}
+#category-navigator-container.is-scrolled-end::after {
+    opacity: 1;
+}
+#category-navigator {
+    display: flex;
+    overflow-x: auto;
+    padding: 0 1rem;
+    scrollbar-width: none;
+}
+#category-navigator::-webkit-scrollbar { display: none; }
+#category-navigator a {
+    padding: 1rem 0.8rem;
+    text-decoration: none;
+    color: #888;
+    font-weight: 600;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
+}
+#category-navigator a.active {
+    color: var(--primary-accent-color);
+    border-bottom-color: var(--primary-accent-color);
+}
+
+/* Contenuto del Menu */
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    padding-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+.menu-item {
+    background-color: var(--card-bg-color);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    overflow: hidden;
+    cursor: pointer;
+}
+.menu-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+.item-content {
+    padding: 1.2rem;
+}
+.item-content h3 { margin: 0 0 0.5rem 0; font-size: 1.25rem; }
+.item-content .description { font-size: 0.9rem; color: #555; }
+.item-content .price { font-size: 1.2rem; font-weight: 700; text-align: right; margin-top: 1rem; }
+
+/* Stile Selettore Nativo */
+.select-wrapper select {
+    appearance: auto;
+    -webkit-appearance: auto;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    width: 100%;
+    font-size: 1rem;
+}
+
+/* --- Modale --- */
+#modal-container {
+    position: fixed; /* Changed from absolute to fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 10000; /* Ensure it's on top of everything */
+    overflow-y: auto; /* Allow scrolling for long content */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+#modal-content {
+    background-color: #fff;
+    padding: 1.5rem; /* Slightly reduced padding */
+    border-radius: 10px;
+    max-width: 90%; /* Max width relative to viewport */
+    width: auto; /* Allow content to dictate width if smaller than max-width */
+    max-height: 90vh; /* Max height relative to viewport height */
+    overflow-y: auto; /* Enable scrolling within the modal content if content is too long */
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    -webkit-overflow-scrolling: touch;
+    display: flex; /* Use flexbox for internal alignment */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text within modal */
+}
+
+#modal-content #modal-img {
+    max-width: 100%; /* Ensure image doesn't overflow */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 1rem; /* Space below image */
+    border-radius: 8px; /* Slightly rounded corners for image */
+}
+
+#modal-content h3 {
+    font-size: 1.5rem; /* Adjust title size */
+    margin-bottom: 0.8rem;
+    color: var(--primary-accent-color); /* Apply accent color */
+}
+
+#modal-content p {
+    font-size: 1rem; /* Adjust description size */
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+#modal-allergens {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd;
+    position: relative;
+    font-size: 0.9rem; /* Adjust allergen text size */
+}
+
+#modal-allergens h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+#modal-allergens ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#modal-allergens li {
+    margin-bottom: 0.3rem;
+}
+
+/* Stile del pulsante di chiusura del modale */
+#modal-close {
+    position: absolute; /* Posizionamento rispetto al contenitore del modale */
+    top: 10px; /* Spostato leggermente più in basso rispetto al bordo superiore */
+    right: 10px; /* Spostato leggermente più a sinistra rispetto al bordo destro */
+    font-size: 2.5rem; /* Rendi la 'x' più grande */
+    font-weight: bold;
+    color: #888; /* Colore più morbido */
+    cursor: pointer;
+    background-color: white; /* Sfondo bianco per il pulsante */
+    border-radius: 50%; /* Rendi il pulsante rotondo */
+    width: 45px; /* Larghezza del pulsante */
+    height: 45px; /* Altezza del pulsante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1; /* Allineamento verticale della 'x' */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Leggera ombra */
+    transition: all 0.2s ease-in-out;
+    z-index: 10001; /* Assicurati che sia sopra il contenuto del modale */
+}
+
+#modal-close:hover {
+    color: var(--primary-accent-color); /* Cambia colore al passaggio del mouse */
+    background-color: #f0f0f0;
+    transform: scale(1.05); /* Piccolo ingrandimento al passaggio del mouse */
+}
+
+/* Adattamenti Mobile */
+@media (max-width: 768px) {
+    #main-header { height: 60px; }
+    .logo { max-height: 40px; }
+    .menu-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; } /* Mostra 2 pizze per riga */
+    .menu-item img { height: 150px; }
+}
+
+/* Adattamenti specifici per schermi molto piccoli */
+@media (max-width: 480px) {
+    #modal-content {
+        padding: 1rem; /* Further reduce padding on very small screens */
+        max-width: 95%; /* Make it slightly wider to utilize screen space */
+    }
+
+    #modal-content h3 {
+        font-size: 1.3rem; /* Smaller title */
+    }
+
+    #modal-content p {
+        font-size: 0.9rem; /* Smaller description */
+    }
+}

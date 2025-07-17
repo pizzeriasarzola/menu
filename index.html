@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Menu Digitale - Pizzeria S'Arzola</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <div id="sticky-header-container">
+        <header id="main-header">
+            <img src="images/logo2.png" alt="Logo Pizzeria S'Arzola" class="logo">
+        </header>
+
+        <div id="contact-banner">
+            <div id="closed-banner-message" style="display: none;">
+                <p>Al momento siamo chiusi. Contattaci per prenotare!</p>
+            </div>
+            <a href="https://wa.me/391234567890?text=Vorrei%20prenotare%20un%20tavolo" target="_blank" class="whatsapp-button">
+                <i class="fab fa-whatsapp"></i>
+                <span>Prenota su WhatsApp</span>
+            </a>
+        </div>
+
+        <div id="search-filter-container">
+            <div class="search-wrapper">
+                <i class="fas fa-search"></i>
+                <input type="search" id="search-input" placeholder="Cerca una pizza o un prodotto...">
+            </div>
+            <button id="filter-toggle-button">Filtra <i class="fas fa-filter"></i></button>
+        </div>
+
+        <div id="category-navigator-container">
+            <nav id="category-navigator">
+                <a href="#antipasti" class="active">Antipasti</a>
+                <a href="#pizze-classiche">Classiche</a>
+                <a href="#pizze-bambini">Bambini</a>
+                <a href="#pizze-barbagia">Barbagia</a>
+                <a href="#pizze-gusti-particolari">Gusti Particolari</a>
+                <a href="#pizze-mare">Mare</a>
+                <a href="#pizze-vegetariane">Vegetariane</a>
+                <a href="#birre">Birre</a>
+                <a href="#bibite">Bibite</a>
+                <a href="#liquori">Liquori</a>
+            </nav>
+        </div>
+    </div>
+
+    <main id="app-container">
+        <div id="menu-content">
+            <section id="antipasti" class="menu-category-section">
+                <h2 class="section-title">Antipasti</h2>
+                <div class="menu-grid">
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1"><img src="images/Antipasti/sarzola.jpg" alt="S'Arzola"><div class="item-content"><h3>S'Arzola</h3><p class="description">Lardo, Pomodori secchi, Pancetta, Salsicce, Cipolline.</p><p class="price">€ 12,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1"><img src="images/Antipasti/terra.jpg" alt="Terra"><div class="item-content"><h3>Terra</h3><p class="description">Salsiccia, Prosciutto Crudo, Pancetta, Olive.</p><p class="price">€ 10,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="2,4,14"><img src="images/Antipasti/mare.jpg" alt="Mare"><div class="item-content"><h3>Mare</h3><p class="description">Insalata mista di mare.</p><p class="price">€ 10,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)"><img src="images/Antipasti/frutti_di_bosco.jpg" alt="Frutti di bosco"><div class="item-content"><h3>Frutti di bosco</h3><p class="description">Cipolline, Funghi porcini, Funghi chiodini, Funghi antunna.</p><p class="price">€ 11,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)"><img src="images/Antipasti/degustazione.jpg" alt="Degustazione"><div class="item-content"><h3>Degustazione</h3><p class="description">Funghi misti, Affettati misti, Cipolline, Olive.</p><p class="price">€ 35,00</p></div></div>
+                </div>
+            </section>
+
+            <section id="pizze-classiche" class="menu-category-section">
+                <h2 class="section-title">Pizze Classiche</h2>
+                <div class="menu-grid">
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze classiche/margherita.jpg" alt="Margherita"><div class="item-content"><h3>Margherita</h3><p class="description">Pomodoro, Mozzarella, Basilico.</p><p class="price">€ 4,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze classiche/regina_margherita.jpg" alt="Regina Margherita"><div class="item-content"><h3>Regina Margherita</h3><p class="description">Pomodoro, Mozzarella di Bufala, Basilico.</p><p class="price">€ 9,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1"><img src="images/Pizze classiche/marinara.jpg" alt="Marinara"><div class="item-content"><h3>Marinara</h3><p class="description">Pomodoro, Aglio, Origano.</p><p class="price">€ 4,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1"><img src="images/Pizze classiche/focaccia.jpg" alt="Focaccia"><div class="item-content"><h3>Focaccia</h3><p class="description">Olio, Sale.</p><p class="price">€ 3,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze classiche/bianca.jpg" alt="Bianca"><div class="item-content"><h3>Bianca</h3><p class="description">Mozzarella.</p><p class="price">€ 4,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze classiche/caprese.jpg" alt="Caprese"><div class="item-content"><h3>Caprese</h3><p class="description">Mozzarella di bufala, Pomodori, Basilico.</p><p class="price">€ 9,80</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze classiche/diavola.jpg" alt="Diavola"><div class="item-content"><h3>Diavola</h3><p class="description">Pomodoro, Mozzarella, Salsiccia piccante.</p><p class="price">€ 6,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze classiche/wurstel.jpg" alt="Wurstel"><div class="item-content"><h3>Wurstel</h3><p class="description">Pomodoro, Mozzarella, Wurstel.</p><p class="price">€ 5,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze classiche/americana.jpg" alt="Americana"><div class="item-content"><h3>Americana</h3><p class="description">Pomodoro, Mozzarella, Würstel, Patatine fritte.</p><p class="price">€ 7,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze classiche/patate.jpg" alt="Patate"><div class="item-content"><h3>Patate</h3><p class="description">Pomodoro, Mozzarella, Patate Fritte.</p><p class="price">€ 6,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze classiche/prosciutto_cotto.jpg" alt="Prosciutto Cotto"><div class="item-content"><h3>Prosciutto Cotto</h3><p class="description">Pomodoro, Mozzarella, Prosciutto Cotto.</p><p class="price">€ 5,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze classiche/prosciutto_crudo.jpg" alt="Prosciutto Crudo"><div class="item-content"><h3>Prosciutto Crudo</h3><p class="description">Pomodoro, Mozzarella, Prosciutto Crudo.</p><p class="price">€ 9,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze classiche/salsiccia.jpg" alt="Salsiccia"><div class="item-content"><h3>Salsiccia</h3><p class="description">Pomodoro, mozzarella, Salsiccia.</p><p class="price">€ 5,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze classiche/pancetta.jpg" alt="Pancetta"><div class="item-content"><h3>Pancetta</h3><p class="description">Pomodoro, Mozzarella, Pancetta.</p><p class="price">€ 6,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,4,7"><img src="images/Pizze classiche/napoletana.jpg" alt="Napoletana"><div class="item-content"><h3>Napoletana</h3><p class="description">Pomodoro, Mozzarella, Capperi, Acciughe.</p><p class="price">€ 8,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,4,7"><img src="images/Pizze classiche/acciughe.jpg" alt="Acciughe"><div class="item-content"><h3>Acciughe</h3><p class="description">Pomodoro, Mozzarella, Acciughe.</p><p class="price">€ 7,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze classiche/porcini.jpg" alt="Porcini"><div class="item-content"><h3>Porcini</h3><p class="description">Pomodoro, Mozzarella, Porcini.</p><p class="price">€ 7,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,4,7"><img src="images/Pizze classiche/romana.jpg" alt="Romana"><div class="item-content"><h3>Romana</h3><p class="description">Pomodoro, Mozzarella, Acciughe, Origano.</p><p class="price">€ 8,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,4,7"><img src="images/Pizze classiche/tonno_cipolle.jpg" alt="Tonno Cipolle"><div class="item-content"><h3>Tonno Cipolle</h3><p class="description">Pomodoro, Mozzarella, Tonno, Cipolle.</p><p class="price">€ 6,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze classiche/funghi.jpg" alt="Funghi"><div class="item-content"><h3>Funghi</h3><p class="description">Pomodoro, Mozzarella, Funghi.</p><p class="price">€ 6,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze classiche/cotto_funghi.jpg" alt="Cotto Funghi"><div class="item-content"><h3>Cotto Funghi</h3><p class="description">Pomodoro, Mozzarella, Prosciutto Cotto, Funghi.</p><p class="price">€ 7,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze classiche/tris_funghi.jpg" alt="Tris di Funghi"><div class="item-content"><h3>Tris di Funghi</h3><p class="description">Pomodoro, Mozzarella, Antunna, Porcini, Prataioli.</p><p class="price">€ 10,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,4,7"><img src="images/Pizze classiche/capricciosa.jpg" alt="Capricciosa"><div class="item-content"><h3>Capricciosa</h3><p class="description">Pomodoro, Mozzarella, Funghi, Cotto, Carciofi, Olive, Acciughe, Gorgonzola.</p><p class="price">€ 9,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,3,7"><img src="images/Pizze classiche/completa.jpg" alt="Completa"><div class="item-content"><h3>Completa</h3><p class="description">Pomodoro, Mozzarella, Funghi, Purpedda, Uovo.</p><p class="price">€ 11,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze classiche/4stagioni.jpg" alt="4 Stagioni"><div class="item-content"><h3>4 Stagioni</h3><p class="description">Pomodoro, Mozzarella, Cotto, Funghi, Würstel, Carciofi.</p><p class="price">€ 10,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze classiche/4formaggi.jpg" alt="4 Formaggi"><div class="item-content"><h3>4 Formaggi</h3><p class="description">Pomodoro, Mozzarella, Casizolu, Pecorino, Gorgonzola.</p><p class="price">€ 9,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze classiche/parigina.jpg" alt="Parigina"><div class="item-content"><h3>Parigina</h3><p class="description">Pomodoro, Mozzarella, Panna, Prosciutto Cotto.</p><p class="price">€ 9,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze classiche/deliziosa.jpg" alt="Deliziosa"><div class="item-content"><h3>Deliziosa</h3><p class="description">Pomodoro, Mozzarella, Speck, Pomodori, Grana.</p><p class="price">€ 10,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze classiche/speck.jpg" alt="Speck"><div class="item-content"><h3>Speck</h3><p class="description">Pomodoro, Mozzarella, Speck.</p><p class="price">€ 8,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze classiche/carciofi.jpg" alt="Carciofi"><div class="item-content"><h3>Carciofi</h3><p class="description">Pomodoro, Mozzarella, Carciofi.</p><p class="price">€ 6,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze classiche/gorgo.jpg" alt="Gorgo"><div class="item-content"><h3>Gorgo</h3><p class="description">Pomodoro, Mozzarella, Gorgonzola.</p><p class="price">€ 5,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze classiche/prataioli.jpg" alt="Prataioli"><div class="item-content"><h3>Prataioli</h3><p class="description">Pomodoro, Mozzarella, Prataioli.</p><p class="price">€ 7,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze classiche/calzone.jpg" alt="Calzone"><div class="item-content"><h3>Calzone</h3><p class="description">Pomodoro, Mozzarella, Prosciutto Cotto, Funghi.</p><p class="price">€ 7,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,4,7"><img src="images/Pizze classiche/calzone_farcito.jpg" alt="Calzone Farcito"><div class="item-content"><h3>Calzone Farcito</h3><p class="description">Pomodoro, Mozzarella, Prosciutto Cotto, Funghi, Würstel, Acciughe.</p><p class="price">€ 10,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze classiche/valtellinese.jpg" alt="Valtellinese"><div class="item-content"><h3>Valtellinese</h3><p class="description">Pomodoro, Mozzarella, Bresaola, Rucola, Grana.</p><p class="price">€ 9,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze classiche/delnonno.jpg" alt="Del Nonno"><div class="item-content"><h3>Del Nonno</h3><p class="description">Mozzarella, Prosciutto Cotto.</p><p class="price">€ 5,50</p></div></div>
+                </div>
+            </section>
+
+            <section id="pizze-bambini" class="menu-category-section">
+                <h2 class="section-title">Pizze per Bambini</h2>
+                <div class="menu-grid">
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze per bambini/topolino.jpg" alt="Topolino"><div class="item-content"><h3>Topolino</h3><p class="description">Pomodoro, Mozzarella, Olive, Wurstel.</p><p class="price">€ 4,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze per bambini/simpson.jpg" alt="Simpson"><div class="item-content"><h3>Simpson</h3><p class="description">Pomodoro, Mozzarella, Olive, Wurstel, Patatine fritte.</p><p class="price">€ 5,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze per bambini/sole.jpg" alt="Sole"><div class="item-content"><h3>Sole</h3><p class="description">Pomodoro, Mozzarella, Olive, Wurstel, Patatine fritte.</p><p class="price">€ 5,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze per bambini/stellina.jpg" alt="Stellina"><div class="item-content"><h3>Stellina</h3><p class="description">Pomodoro, Mozzarella, Olive, Wurstel.</p><p class="price">€ 4,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze per bambini/delfino.jpg" alt="Delfino"><div class="item-content"><h3>Delfino</h3><p class="description">Mozzarella.</p><p class="price">€ 4,00</p></div></div>
+                </div>
+            </section>
+
+            <section id="pizze-barbagia" class="menu-category-section">
+                <h2 class="section-title">Pizze della Barbagia</h2>
+                <div class="menu-grid">
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,4,7"><img src="images/Pizze della Barbagia/burlardata.jpg" alt="Burlardata"><div class="item-content"><h3>Burlardata</h3><p class="description">Pomodoro, Burrata, Acciughe, Lardo, Pomodorini, Pepe, Basilico.</p><p class="price">€ 12,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze della Barbagia/sarzola.jpg" alt="S'arzola"><div class="item-content"><h3>S'Arzola</h3><p class="description">Pomodoro, Mozzarella, Lardo, Cipolle, Pecorino, Pomodorini.</p><p class="price">€ 9,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze della Barbagia/oroteddesa.jpg" alt="Oroteddesa"><div class="item-content"><h3>Oroteddesa</h3><p class="description">Pomodoro, Mozzarella, Purpedda, Lardo, Pilarda (Pomodori secchi), Pecorino.</p><p class="price">€ 11,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze della Barbagia/massaiu.jpg" alt="Massaiu"><div class="item-content"><h3>Massaiu</h3><p class="description">Pomodoro, Mozzarella, Purpedda, Casizolu, Olive, Pomodorini.</p><p class="price">€ 10,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze della Barbagia/barbaricina.jpg" alt="Barbaricinia"><div class="item-content"><h3>Barbaricina</h3><p class="description">Pecorino piccante in uscita, Pomodori e Cipolle marinati in Olio E.V.O. e Aceto.</p><p class="price">€ 9,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze della Barbagia/nuoresa.jpg" alt="Nuoresa"><div class="item-content"><h3>Nuoresa</h3><p class="description">Pomodoro, Mozzarella, Salsiccia, Casizolu.</p><p class="price">€ 7,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze della Barbagia/asparagi.jpg" alt="Asparagi"><div class="item-content"><h3>Asparagi (Stagionale)</h3><p class="description">Pomodoro, Mozzarella, Asparagi, Cipolla, Grana.</p><p class="price">€ 11,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze della Barbagia/disizu.jpg" alt="Disizu"><div class="item-content"><h3>Disizu (Stagionale)</h3><p class="description">Pomodoro, Mozzarella, Asparagi, Appara, Pecorino, Pancetta.</p><p class="price">€ 13,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze della Barbagia/superasparagi.jpg" alt="Super Asparagi"><div class="item-content"><h3>Super Asparagi (Stagionale)</h3><p class="description">Pomodoro, Mozzarella, Asparagi freschi.</p><p class="price">€ 9,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze della Barbagia/porcini_freschi.jpg" alt="Porcini Freschi"><div class="item-content"><h3>Porcini Freschi (Stagionale)</h3><p class="description">Pomodoro, Mozzarella, Porcini freschi.</p><p class="price">€ 8,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze della Barbagia/carciofi_freschi.jpg" alt="Carciofi Freschi"><div class="item-content"><h3>Carciofi Freschi (Stagionale)</h3><p class="description">Pomodoro, Mozzarella, Carciofi freschi.</p><p class="price">€ 8,00</p></div></div>
+                </div>
+            </section>
+
+            <section id="pizze-gusti-particolari" class="menu-category-section">
+                <h2 class="section-title">Gusti Particolari</h2>
+                <div class="menu-grid">
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,4,7,8"><img src="images/Gusti particolari/pistacchiosa.jpg" alt="Pistacchiosa"><div class="item-content"><h3>Pistacchiosa</h3><p class="description">Mozzarella di Bufala, Crema e granella di Pistacchio, Salmone Affumicato, Pepe Rosa, Olio E.V.O, Filetti di peperoncino.</p><p class="price">€ 14,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Gusti particolari/orolai.jpg" alt="Orolai"><div class="item-content"><h3>Orolai</h3><p class="description">Crema di Melanzane, Mozzarella di Bufala affumicata, Prosciutto Crudo, Pomodorini, Basilico.</p><p class="price">€ 13,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Gusti particolari/eterna.jpg" alt="L'Eterna"><div class="item-content"><h3>L'Eterna</h3><p class="description">Mozzarella di Bufala, Cacio e Pepe, Pancetta in Cottura, Cipolline Balsamiche.</p><p class="price">€ 13,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Gusti particolari/vicurosa.jpg" alt="Vicu Rosa"><div class="item-content"><h3>Vicu Rosa</h3><p class="description">Crema di Melanzane, Mozzarella Fior di Latte, Fichi, Prosciutto Crudo, Pomodorini Datterini, Basilico.</p><p class="price">€ 13,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,4,7"><img src="images/Gusti particolari/shardana.jpg" alt="Shardana"><div class="item-content"><h3>Shardana</h3><p class="description">Impasto multicereali, Mozzarella di Bufala, Crema di Asparagi, Bottarga, Ricotta affumicata, Pilarda.</p><p class="price">€ 15,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,4,7"><img src="images/Gusti particolari/pugliese.jpg" alt="Pugliese"><div class="item-content"><h3>Pugliese</h3><p class="description">Burrata, Pomodori, Acciughe, Pepe Nero, Basilico.</p><p class="price">€ 11,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7,8"><img src="images/Gusti particolari/lasabry.jpg" alt="La Sabry"><div class="item-content"><h3>La Sabry</h3><p class="description">Impasto multicereali, Mozzarella di Bufala, Crema al Tartufo, Pilarda, Crema di Noci, Salsiccia di Cinghiale.</p><p class="price">€ 14,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Gusti particolari/boscaiola.jpg" alt="Boscaiola"><div class="item-content"><h3>Boscaiola</h3><p class="description">Mozzarella di Bufala, Gorgonzola, Porcini, Speck.</p><p class="price">€ 12,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Gusti particolari/boscaiola_toscana.jpg" alt="Boscaiola Toscana"><div class="item-content"><h3>Boscaiola Toscana</h3><p class="description">Impasto multicereali, Mozzarella, Zucchine, Carciofi, Prosciutto Crudo, Pecorino al Tartufo.</p><p class="price">€ 14,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Gusti particolari/moreschina_sarda.jpg" alt="Moreschina Sarda"><div class="item-content"><h3>Moreschina Sarda</h3><p class="description">Impasto multicereali, Mozzarella di Bufala, Scamorza, Friarielli, Pilarda (Pomodori secchi), Pancetta.</p><p class="price">€ 13,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Gusti particolari/suprema.jpg" alt="Suprema"><div class="item-content"><h3>Suprema</h3><p class="description">Impasto multicereali, Mozzarella di Bufala, Purpedda, Friarielli, Lardo, Pilarda (Pomodori secchi).</p><p class="price">€ 14,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Gusti particolari/dolce_deciso.jpg" alt="Dolce Deciso"><div class="item-content"><h3>Dolce Deciso</h3><p class="description">Impasto multicereali, Mozzarella, Melanzane grigliate, Casizolu, Friarielli, Lardo, Pilarda (Pomodori secchi).</p><p class="price">€ 13,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Gusti particolari/afrodite.jpg" alt="Afrodite"><div class="item-content"><h3>Afrodite</h3><p class="description">Pomodoro, Mozzarella, Zucchine, Carciofi, Pomodorini, Pecorino al tartufo.</p><p class="price">€ 11,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Gusti particolari/golosa.jpg" alt="Golosa"><div class="item-content"><h3>Golosa</h3><p class="description">Pomodoro, Mozzarella, Scamorza, Cipolle, Pomodorini.</p><p class="price">€ 8,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Gusti particolari/mediterranea.jpg" alt="Mediterranea"><div class="item-content"><h3>Mediterranea</h3><p class="description">Pomodoro, Mozzarella, Prataioli, Peperoni, Gorgonzola, Rucola, Pomodorini.</p><p class="price">€ 11,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Gusti particolari/contadina.jpg" alt="Contadina"><div class="item-content"><h3>Contadina</h3><p class="description">Pomodoro, Mozzarella, Antunna, Olive, Pomodorini, Cipolline Balsamiche.</p><p class="price">€ 11,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Gusti particolari/appetitosa.jpg" alt="Appetitosa"><div class="item-content"><h3>Appetitosa (Stagionale)</h3><p class="description">Pomodoro, Mozzarella, Appara, Porcini, Gorgonzola, Pilarda (Pomodori secchi).</p><p class="price">€ 10,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7,8"><img src="images/Gusti particolari/autunno.jpg" alt="Autunno"><div class="item-content"><h3>Autunno</h3><p class="description">Pomodoro, Mozzarella, Salsiccia di Cinghiale, Chiodini, Crema di Formaggi.</p><p class="price">€ 9,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7,8"><img src="images/Gusti particolari/inverno.jpg" alt="Inverno"><div class="item-content"><h3>Inverno</h3><p class="description">Pomodoro, Mozzarella, Salsiccia Piccante, Porcini, Crema di Formaggi.</p><p class="price">€ 9,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Gusti particolari/suocera.jpg" alt="Suocera"><div class="item-content"><h3>Suocera</h3><p class="description">Pomodoro, Mozzarella, Salsiccia Piccante, Cipolle, Peperoni, Gorgonzola.</p><p class="price">€ 9,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Gusti particolari/cacciatora.jpg" alt="Cacciatora"><div class="item-content"><h3>Cacciatora</h3><p class="description">Pomodoro, Mozzarella, Prataioli, Salsiccia di Cinghiale, Cipolle, Olive.</p><p class="price">€ 10,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Gusti particolari/mexicana.jpg" alt="Mexicana"><div class="item-content"><h3>Mexicana</h3><p class="description">Pomodoro, Mozzarella, Fagioli, Cipolle, Salsiccia Piccante, Pomodorini.</p><p class="price">€ 9,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Gusti particolari/antunna.jpg" alt="Antunna"><div class="item-content"><h3>Antunna</h3><p class="description">Pomodoro, Mozzarella, Funghi Antunna, Pancetta.</p><p class="price">€ 8,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Gusti particolari/bersagliera.jpg" alt="Bersagliera"><div class="item-content"><h3>Bersagliera</h3><p class="description">Pomodoro, Mozzarella, Prataioli, Gorgonzola, Cipolle, Pilarda (Pomodori Secchi).</p><p class="price">€ 10,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Gusti particolari/rustica.jpg" alt="Rustica"><div class="item-content"><h3>Rustica</h3><p class="description">Pomodoro, Mozzarella, Pancetta, Peperoni, Cipolle, Carciofi.</p><p class="price">€ 10,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Gusti particolari/campagnola.jpg" alt="Campagnola"><div class="item-content"><h3>Campagnola</h3><p class="description">Pomodoro, Mozzarella, Funghi Antunna, Pancetta, Pomodori.</p><p class="price">€ 9,50</p></div></div>
+                </div>
+            </section>
+            
+            <section id="pizze-mare" class="menu-category-section">
+                <h2 class="section-title">Pizze del Mare</h2>
+                <div class="menu-grid">
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,2,4,7,14"><img src="images/Pizze del mare/fruttimare.jpg" alt="Frutti Mare"><div class="item-content"><h3>Frutti Mare</h3><p class="description">Pomodoro, Mozzarella, Insalata mista di Mare.</p><p class="price">€ 9,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,2,4,7,14"><img src="images/Pizze del mare/tris_mare.jpg" alt="Tris Mare"><div class="item-content"><h3>Tris Mare</h3><p class="description">Pomodoro, Mozzarella, Cozze, Arselle, Insalata mista di Mare.</p><p class="price">€ 13,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,4,7"><img src="images/Pizze del mare/satentassione.jpg" alt="Sa Tentassione"><div class="item-content"><h3>Sa Tentassione (Stagionale)</h3><p class="description">Mozzarella di Bufala, Asparagi, Carciofi, Appara, Bottarga a scaglie.</p><p class="price">€ 15,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,2,4,7,14"><img src="images/Pizze del mare/mari_monti.jpg" alt="Mari Monti"><div class="item-content"><h3>Mari Monti</h3><p class="description">Pomodoro, Mozzarella, Salsiccia, Cipolle, Insalata mista di Mare.</p><p class="price">€ 10,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,2,7"><img src="images/Pizze del mare/sfiziosa.jpg" alt="Sfiziosa"><div class="item-content"><h3>Sfiziosa</h3><p class="description">Pomodoro, Mozzarella di Bufala, Gamberetti, Funghi Porcini, Pomodori.</p><p class="price">€ 13,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,4,7"><img src="images/Pizze del mare/bella_sardegna.jpg" alt="Bella Sardegna"><div class="item-content"><h3>Bella Sardegna</h3><p class="description">Pomodoro, Mozzarella di Bufala, Aglio, Origano, Acciughe.</p><p class="price">€ 11,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,4,7"><img src="images/Pizze del mare/bottarga.jpg" alt="Bottarga"><div class="item-content"><h3>Bottarga</h3><p class="description">Mozzarella, Bottarga, Pomodorini.</p><p class="price">€ 12,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,4,7"><img src="images/Pizze del mare/sandalion.jpg" alt="Sandalion"><div class="item-content"><h3>Sandalion</h3><p class="description">Mozzarella, Bottarga, Carciofi, Zucchine grigliate.</p><p class="price">€ 14,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,2,7"><img src="images/Pizze del mare/licanzia.jpg" alt="Licanzia"><div class="item-content"><h3>Licanzia</h3><p class="description">Mozzarella, Crema di Asparagi, Gamberetti, Gorgo, Pilarda.</p><p class="price">€ 12,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,4,7"><img src="images/Pizze del mare/super_bottarga.jpg" alt="Super Bottarga"><div class="item-content"><h3>Super Bottarga</h3><p class="description">Pomodoro, Mozzarella, Bottarga a scaglie.</p><p class="price">€ 11,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,4,7,14"><img src="images/Pizze del mare/brezza_marina.jpg" alt="Brezza Marina"><div class="item-content"><h3>Brezza Marina</h3><p class="description">Mozzarella di Bufala, Polpa di Ricci Freschi, Bottarga a scaglie, Pomodorini, Basilico.</p><p class="price">€ 18,00</p></div></div>
+                </div>
+            </section>
+
+            <section id="pizze-vegetariane" class="menu-category-section">
+                <h2 class="section-title">Pizze Vegetariane</h2>
+                <div class="menu-grid">
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze vegetariane/parmigiana.jpg" alt="Parmigiana"><div class="item-content"><h3>Parmigiana</h3><p class="description">Pomodoro, Mozzarella, Melanzane grigliate, Grana.</p><p class="price">€ 7,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze vegetariane/vegetariana.jpg" alt="Vegetariana"><div class="item-content"><h3>Vegetariana</h3><p class="description">Pomodoro, Mozzarella, Melanzane, Peperoni, Zucchine, Radicchio.</p><p class="price">€ 9,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze vegetariane/grigliè.jpg" alt="Grigliè"><div class="item-content"><h3>Grigliè</h3><p class="description">Pomodoro, Mozzarella, Melanzane, Peperoni, Zucchine grigliate.</p><p class="price">€ 8,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze vegetariane/poker_verdure.jpg" alt="Poker Verdure"><div class="item-content"><h3>Poker Verdure</h3><p class="description">Mozzarella, Friarielli, Rucola, Radicchio, Pomodorini.</p><p class="price">€ 9,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze vegetariane/italia.jpg" alt="Italia"><div class="item-content"><h3>Italia</h3><p class="description">Mozzarella, Pomodori, Rucola, Grana.</p><p class="price">€ 8,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze vegetariane/ptz.jpg" alt="P.T.Z"><div class="item-content"><h3>P.T.Z</h3><p class="description">Mozzarella di Bufala, Friarielli, Pomodorini.</p><p class="price">€ 10,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze vegetariane/della_nonna.jpg" alt="Della Nonna"><div class="item-content"><h3>Della Nonna</h3><p class="description">Mozzarella, Melanzane, Pomodorini, Rucola.</p><p class="price">€ 8,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze vegetariane/italia2.jpg" alt="Italia 2"><div class="item-content"><h3>Italia 2</h3><p class="description">Doppia Mozzarella, Rucola, Pilarda (Pomodori secchi).</p><p class="price">€ 7,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze vegetariane/primavera.jpg" alt="Primavera"><div class="item-content"><h3>Primavera</h3><p class="description">Mozzarella, Rucola, Radicchio, Grana.</p><p class="price">€ 8,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze vegetariane/trevigiana.jpg" alt="Trevigiana"><div class="item-content"><h3>Trevigiana</h3><p class="description">Mozzarella, Zucchine, Pomodorini, Radicchio.</p><p class="price">€ 8,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1,7"><img src="images/Pizze vegetariane/estate.jpg" alt="Estate"><div class="item-content"><h3>Estate</h3><p class="description">Mozzarella, Cipolla, Pomodori, Rucola, Zucchine.</p><p class="price">€ 8,50</p></div></div>
+                </div>
+            </section>
+            
+            <section id="birre" class="menu-category-section">
+                <h2 class="section-title">Birre</h2>
+                <div class="menu-grid">
+                    <div class="menu-item beer-item">
+                        <img src="images/Bevande/tuborg.jpg" alt="Tuborg alla Spina">
+                        <div class="item-content">
+                            <h3>Tuborg (Bionda alla spina)</h3>
+                            <p class="description">Birra chiara e rinfrescante servita alla spina.</p>
+                            <div class="beer-options">
+                                <div class="select-wrapper">
+                                    <select onchange="updatePrice(this)" data-price-20cl="2.50" data-price-40cl="4.60" data-price-50cl="5.00" data-price-1l="9.90" data-price-1-5l="14.00">
+                                        <option value="20cl">20 cl</option><option value="40cl">40 cl</option><option value="50cl">50 cl</option><option value="1l">1 L</option><option value="1-5l">1.5 L</option>
+                                    </select>
+                                </div>
+                                <p class="price dynamic-price">€ 2,50</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item" onclick="openModal(this)"><img src="images/Bevande/ichnusa.jpg" alt="Ichnusa"><div class="item-content"><h3>Ichnusa</h3><p class="description">Birra bionda di Sardegna, 66 cl.</p><p class="price">€ 3,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)"><img src="images/Bevande/ichnusa_nonfiltrata.jpg" alt="Ichnusa non filtrata"><div class="item-content"><h3>Ichnusa non filtrata</h3><p class="description">Birra corposa e autentica, 33 cl.</p><p class="price">€ 3,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)"><img src="images/Bevande/becks.jpg" alt="Beck's"><div class="item-content"><h3>Beck's</h3><p class="description">Classica pilsner tedesca, 33 cl.</p><p class="price">€ 3,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)"><img src="images/Bevande/heineken.jpg" alt="Heineken"><div class="item-content"><h3>Heineken</h3><p class="description">Lager internazionale, 33 cl.</p><p class="price">€ 3,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)" data-allergens="1"><img src="images/Bevande/birranoglu.jpg" alt="Birra senza glutine"><div class="item-content"><h3>Birra senza glutine</h3><p class="description">Selezione Daura o Peroni, 33 cl.</p><p class="price">€ 3,50</p></div></div>
+                </div>
+            </section>
+            
+            <section id="bibite" class="menu-category-section">
+                <h2 class="section-title">Bibite</h2>
+                <div class="menu-grid">
+                    <div class="menu-item" onclick="openModal(this)"><img src="images/Bevande/cocacola.jpg" alt="Coca Cola"><div class="item-content"><h3>Coca Cola</h3><p class="description">Lattina 33 cl.</p><p class="price">€ 2,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)"><img src="images/Bevande/sprite.jpg" alt="Sprite"><div class="item-content"><h3>Sprite</h3><p class="description">Lattina 33 cl.</p><p class="price">€ 2,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)"><img src="images/Bevande/fanta.jpg" alt="Fanta"><div class="item-content"><h3>Fanta</h3><p class="description">Lattina 33 cl.</p><p class="price">€ 2,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)"><img src="images/Bevande/the.jpg" alt="Thè Freddo"><div class="item-content"><h3>Thè Freddo</h3><p class="description">Limone o Pesca, Lattina 33 cl.</p><p class="price">€ 2,50</p></div></div>
+                    <div class="menu-item beer-item">
+                        <img src="images/Bevande/acqua.jpg" alt="Acqua Minerale">
+                        <div class="item-content">
+                            <h3>Acqua Minerale</h3>
+                            <p class="description">Naturale o Frizzante.</p>
+                            <div class="beer-options">
+                                <div class="select-wrapper">
+                                    <select onchange="updatePrice(this)" data-price-0-75l="1.30" data-price-0-50l="1.00">
+                                        <option value="0-75l">0,75 L</option><option value="0-50l">0,50 L</option>
+                                    </select>
+                                </div>
+                                <p class="price dynamic-price">€ 1,30</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="liquori" class="menu-category-section">
+                <h2 class="section-title">Liquori</h2>
+                <div class="menu-grid">
+                    <div class="menu-item" onclick="openModal(this)"><img src="images/Bevande/amari.jpg" alt="Amari"><div class="item-content"><h3>Amari</h3><p class="description">Selezione di amari classici.</p><p class="price">€ 2,80</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)"><img src="images/Bevande/limoncello.jpg" alt="Limoncello"><div class="item-content"><h3>Limoncello</h3><p class="description">Limoncello artigianale.</p><p class="price">€ 2,80</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)"><img src="images/Bevande/crema.jpg" alt="Crema d'arancio/Limone"><div class="item-content"><h3>Crema d'arancio/Limone</h3><p class="description">Crema di liquore agli agrumi.</p><p class="price">€ 3,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)"><img src="images/Bevande/mirto.jpg" alt="Crema di Mirto"><div class="item-content"><h3>Crema di Mirto</h3><p class="description">Crema di liquore al mirto.</p><p class="price">€ 3,00</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)"><img src="images/Bevande/acquavite.jpg" alt="Acquavite"><div class="item-content"><h3>Acquavite</h3><p class="description">Acquavite bianca sarda.</p><p class="price">€ 3,20</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)"><img src="images/Bevande/acquavite_ginepro.jpg" alt="Acquavite al Ginepro"><div class="item-content"><h3>Acquavite al Ginepro</h3><p class="description">Distillato aromatizzato al ginepro.</p><p class="price">€ 3,30</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)"><img src="images/Bevande/acquavite_barricata.jpg" alt="Acquavite barricata"><div class="item-content"><h3>Acquavite barricata</h3><p class="description">Invecchiata in botti di legno.</p><p class="price">€ 3,50</p></div></div>
+                    <div class="menu-item" onclick="openModal(this)"><img src="images/Bevande/cotogna.jpg" alt="Cotogna in spirito"><div class="item-content"><h3>Cotogna in spirito</h3><p class="description">Frutto sotto spirito.</p><p class="price">€ 3,50</p></div></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer id="main-footer">
+    <div class="footer-content">
+        <img src="images/logo2.png" alt="Logo Pizzeria S'Arzola" class="footer-logo">
+        
+        <p class="address">Corso Vittorio Emanuele, 82, 08020 Orotelli NU</p>
+        
+        <p class="phone">Tel: <a href="tel:+39 0784 79303"> 0784 79303</a></p>
+        
+        <div class="social-links">
+            <a href="https://www.instagram.com/pizzeriasarzola/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            
+            <a href="https://www.facebook.com/people/Pizzeria-SArzola/100063488832865/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        
+    </div>
+    <div class="copyright">
+        <p>© 2024 Pizzeria S'Arzola. Tutti i diritti riservati.</p>
+    </div>
+</footer>
+
+    <div id="modal-container" onclick="closeModal()">
+        <div id="modal-content" onclick="event.stopPropagation()">
+            <span id="modal-close" onclick="closeModal()">&times;</span>
+            <img id="modal-img" src="" alt="Dettaglio piatto">
+            <h3 id="modal-title"></h3>
+            <p id="modal-description"></p>
+            <div id="modal-allergens"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
