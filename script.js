@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             1: { closed: true }, // Lunedì
             default: { open: 18.5, close: 23.5 }, // Mar-Dom (18:30 - 23:30)
         },
-        whatsappNumber: "391234567890", // Sostituisci con il tuo numero
+        whatsappNumber: "3339721220", // Sostituisci con il tuo numero
         allergenMap: { '1': 'Glutine', '2': 'Crostacei', '3': 'Uova', '4': 'Pesce', '5': 'Arachidi', '6': 'Soia', '7': 'Latte e lattosio', '8': 'Frutta a guscio', '9': 'Sedano', '10': 'Senape', '11': 'Semi di sesamo', '12': 'Anidride solforosa e solfiti', '13': 'Lupini', '14': 'Molluschi' }
     };
 
