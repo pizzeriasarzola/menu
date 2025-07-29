@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             1: { closed: true }, // Lunedì
             default: { open: 18.5, close: 23.5 }, // Mar-Dom (18:30 - 23:30)
         },
-        whatsappNumber: "3339721220", // Sostituisci con il tuo numero
+        whatsappNumber: "3339721220",
         allergenMap: { '1': 'Glutine', '2': 'Crostacei', '3': 'Uova', '4': 'Pesce', '5': 'Arachidi', '6': 'Soia', '7': 'Latte e lattosio', '8': 'Frutta a guscio', '9': 'Sedano', '10': 'Senape', '11': 'Semi di sesamo', '12': 'Anidride solforosa e solfiti', '13': 'Lupini', '14': 'Molluschi' }
     };
 
@@ -35,25 +35,21 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!contactBanner) return;
 
         const now = new Date();
-        const day = now.getDay(); // Domenica: 0, Lunedì: 1, ...
+        const day = now.getDay();
         const hour = now.getHours() + now.getMinutes() / 60;
         
         const todaysHours = settings.openingHours[day] || settings.openingHours.default;
         
         const isClosed = todaysHours.closed || !(hour >= todaysHours.open && hour < todaysHours.close);
         
+        const topBannerWrapper = document.getElementById('top-banner-wrapper');
+        
         if (isClosed) {
-            // Se il locale è chiuso, mostra l'intero banner di contatto
-            contactBanner.style.display = 'block';
-            
-            // Assicurati che il messaggio di chiusura sia visibile (è nascosto di default in HTML)
+            if (topBannerWrapper) topBannerWrapper.style.display = 'block';
             const bannerMessage = document.getElementById('closed-banner-message');
-            if (bannerMessage) {
-                bannerMessage.style.display = 'block';
-            }
+            if (bannerMessage) bannerMessage.style.display = 'block';
         } else {
-            // Se il locale è aperto, nascondi l'intero banner di contatto
-            contactBanner.style.display = 'none';
+            if (topBannerWrapper) topBannerWrapper.style.display = 'none';
         }
     }
 
@@ -97,26 +93,55 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- SEZIONE TRADUZIONE ---
+    const translatableElements = document.querySelectorAll('[data-it]');
+    const translatablePlaceholders = document.querySelectorAll('[data-it-placeholder]');
+    const langButtons = document.querySelectorAll('.lang-btn');
+
+    function switchLanguage(lang) {
+        if (!lang) return;
+
+        translatableElements.forEach(el => {
+            if (el.dataset[lang]) {
+                el.textContent = el.dataset[lang];
+            }
+        });
+
+        translatablePlaceholders.forEach(el => {
+            const placeholderKey = `itPlaceholder`; // Always start from Italian for consistency
+            if (el.dataset[placeholderKey.replace('it', lang)]) {
+                 el.placeholder = el.dataset[placeholderKey.replace('it', lang)];
+            }
+        });
+
+        langButtons.forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.lang === lang);
+        });
+        
+        localStorage.setItem('preferredLanguage', lang);
+    }
+
+    langButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            switchLanguage(button.dataset.lang);
+        });
+    });
+
+    const savedLang = localStorage.getItem('preferredLanguage');
+    if (savedLang) {
+        switchLanguage(savedLang);
+    }
+    // --- FINE SEZIONE TRADUZIONE ---
+
+
     function openModal(itemElement) {
-        // Logica per aprire il modale corretto in base all'ID dell'elemento
         switch (itemElement.id) {
-            case 'caffe-item':
-                coffeeModal?.classList.add('active');
-                break;
-            case 'tuborg-item':
-                beerModal?.classList.add('active');
-                break;
-            case 'acqua-item':
-                acquaModal?.classList.add('active');
-                break;
-            case 'vino-item':
-                vinoModal?.classList.add('active');
-                break;
-            case 'amari-item':
-                amariModal?.classList.add('active');
-                break;
+            case 'caffe-item': coffeeModal?.classList.add('active'); break;
+            case 'tuborg-item': beerModal?.classList.add('active'); break;
+            case 'acqua-item': acquaModal?.classList.add('active'); break;
+            case 'vino-item': vinoModal?.classList.add('active'); break;
+            case 'amari-item': amariModal?.classList.add('active'); break;
             default:
-                // Apre il modale standard per tutti gli altri prodotti
                 const modalImg = standardModal.querySelector('#modal-img');
                 const modalTitle = standardModal.querySelector('#modal-title');
                 const modalDescription = standardModal.querySelector('#modal-description');
@@ -124,12 +149,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 modalImg.src = itemElement.querySelector('img').src;
                 modalTitle.textContent = itemElement.querySelector('h3').textContent;
-                modalDescription.textContent = itemElement.querySelector('.description').textContent;
+                
+                // Popola la descrizione con la lingua corrente
+                const currentLang = localStorage.getItem('preferredLanguage') || 'it';
+                const descriptionEl = itemElement.querySelector('.description');
+                modalDescription.textContent = descriptionEl.dataset[currentLang] || descriptionEl.textContent;
                 
                 const allergenData = itemElement.dataset.allergens;
                 modalAllergens.innerHTML = '';
                 if (allergenData) {
-                    let html = '<h4>Allergeni presenti:</h4><ul>';
+                    const allergenTitle = {
+                        it: "Allergeni presenti:",
+                        en: "Allergens present:",
+                        es: "Alérgenos presentes:",
+                        fr: "Allergènes présents :"
+                    };
+                    let html = `<h4>${allergenTitle[currentLang]}</h4><ul>`;
                     allergenData.split(',').forEach(num => {
                         const key = num.trim();
                         if (settings.allergenMap[key]) {
@@ -196,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- COLLEGAMENTO EVENTI ---
     if (searchInput) searchInput.addEventListener('input', handleSearch);
-    if (backToTopButton) backToTopButton.addEventListener('click', () => window.scrollTo({ top: 0 }));
+    if (backToTopButton) backToTopButton.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     
     if (menuContent) {
         menuContent.addEventListener('click', (e) => {
