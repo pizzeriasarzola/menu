@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- SEZIONE TRADUZIONE ---
+    // --- SEZIONE TRADUZIONE (OTTIMIZZATA) ---
     const translatableElements = document.querySelectorAll('[data-it]');
     const translatablePlaceholders = document.querySelectorAll('[data-it-placeholder]');
     const langButtons = document.querySelectorAll('.lang-btn');
@@ -101,19 +101,32 @@ document.addEventListener('DOMContentLoaded', () => {
     function switchLanguage(lang) {
         if (!lang) return;
 
+        // **OTTIMIZZAZIONE**: Nascondi il contenuto principale per evitare ridisegni multipli
+        if (menuContent) {
+            menuContent.style.display = 'none';
+        }
+
+        // Traduci tutti gli elementi
         translatableElements.forEach(el => {
-            if (el.dataset[lang]) {
+            if (el.dataset[lang] !== undefined) {
                 el.textContent = el.dataset[lang];
             }
         });
 
+        // Traduci i placeholder
         translatablePlaceholders.forEach(el => {
-            const placeholderKey = `itPlaceholder`; // Always start from Italian for consistency
-            if (el.dataset[placeholderKey.replace('it', lang)]) {
-                 el.placeholder = el.dataset[placeholderKey.replace('it', lang)];
+            const propName = `${lang}Placeholder`;
+            if (el.dataset[propName] !== undefined) {
+                el.placeholder = el.dataset[propName];
             }
         });
 
+        // **OTTIMIZZAZIONE**: Mostra di nuovo il contenuto, forzando un solo ridisegno
+        if (menuContent) {
+            menuContent.style.display = '';
+        }
+
+        // Aggiorna lo stato attivo dei pulsanti
         langButtons.forEach(btn => {
             btn.classList.toggle('active', btn.dataset.lang === lang);
         });
@@ -150,7 +163,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 modalImg.src = itemElement.querySelector('img').src;
                 modalTitle.textContent = itemElement.querySelector('h3').textContent;
                 
-                // Popola la descrizione con la lingua corrente
                 const currentLang = localStorage.getItem('preferredLanguage') || 'it';
                 const descriptionEl = itemElement.querySelector('.description');
                 modalDescription.textContent = descriptionEl.dataset[currentLang] || descriptionEl.textContent;
@@ -164,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         es: "Alérgenos presentes:",
                         fr: "Allergènes présents :"
                     };
-                    let html = `<h4>${allergenTitle[currentLang]}</h4><ul>`;
+                    let html = `<h4>${allergenTitle[currentLang] || allergenTitle['it']}</h4><ul>`;
                     allergenData.split(',').forEach(num => {
                         const key = num.trim();
                         if (settings.allergenMap[key]) {
@@ -245,7 +257,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.modal-wrapper').forEach(m => m.addEventListener('click', (e) => { if (e.target === m) closeModal(); }));
     document.querySelectorAll('.modal-close').forEach(btn => btn.addEventListener('click', closeModal));
     
-    menuSections.forEach(section => observer.observe(section));
+    menuSections.forEach(section => {
+        if (!searchInput || searchInput.value.length === 0) {
+            observer.observe(section);
+        }
+    });
+    
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
