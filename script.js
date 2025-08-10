@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const beerModal = document.getElementById('beer-modal-container');
     const vinoModal = document.getElementById('vino-modal-container');
     const amariModal = document.getElementById('amari-modal-container');
+    const addonsModal = document.getElementById('addons-modal-container');
 
     // --- 2. IMPOSTAZIONI E DATI ---
     const settings = {
@@ -95,6 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'tuborg-item': beerModal?.classList.add('active'); break;
             case 'vino-item': vinoModal?.classList.add('active'); break;
             case 'amari-item': amariModal?.classList.add('active'); break;
+            case 'addons-item': addonsModal?.classList.add('active'); break;
             default:
                 const modalImg = standardModal.querySelector('#modal-img');
                 const modalTitle = standardModal.querySelector('#modal-title');
@@ -167,7 +169,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
                 const id = entry.target.id;
                 navLinks.forEach(link => {
-                    const isActive = link.getAttribute('href') === `#${id}`;
                     link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
                 });
             }
@@ -210,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 6. ESECUZIONE INIZIALE ---
     menuSections.forEach(section => observer.observe(section));
     setBodyPadding();
-    setupOptionSelectors(); // Esecuzione della funzione per i prezzi
+    setupOptionSelectors();
     const preferredLanguage = localStorage.getItem('preferredLanguage') || 'it';
     switchLanguage(preferredLanguage);
 });

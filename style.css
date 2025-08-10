@@ -191,7 +191,7 @@ body.scrolled #search-container {
     color: white;
 }
 
-/* Stile per selettori a LISTA (Amari) */
+/* Stile per selettori a LISTA (Amari, Aggiunte) */
 .options-list .option-item {
     display: flex;
     align-items: center;
@@ -231,14 +231,13 @@ body.scrolled #search-container {
     position: relative; 
     transform: scale(0.9); 
     transition: transform 0.4s ease;
-    /* --- CORREZIONE: Aggiunto colore del testo per garantire la leggibilità --- */
     color: var(--text-color);
 }
 .modal-wrapper.active .modal-box { transform: scale(1); }
 .modal-close { position: absolute; top: 15px; right: 20px; font-size: 2rem; font-weight: bold; cursor: pointer; color: #888; }
 .modal-box img { width: 100%; max-height: 40vh; object-fit: contain; border-radius: 10px; margin-bottom: 1rem; }
 .modal-box h3 { font-family: 'Poppins', sans-serif; font-size: 1.8rem; margin: 0; }
-.modal-box p { color: #555; } /* Stile generico per i paragrafi nel modale */
+.modal-box p { color: #555; }
 .modal-box p.description { font-size: 1rem; margin: 0.5rem 0 1.5rem 0; }
 #modal-allergens { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #ddd; }
 #modal-allergens h4 { margin-top: 0; font-weight: 600; color: var(--text-color); }
@@ -294,7 +293,28 @@ body.scrolled #search-container {
 .social-links { margin: 2rem 0; }
 .social-links a { font-size: 1.8rem; margin: 0 1rem; color: white; transition: color 0.3s ease; }
 .social-links a:hover { color: var(--primary-accent-color); }
-.copyright { padding-top: 2rem; }
+
+.footer-bottom-info {
+    padding: 2rem 0 1rem 0;
+    border-top: 1px solid #444;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+.coperto-info {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ccc;
+    margin: 0;
+}
+.award-logo img {
+    max-height: 85px;
+    opacity: 0.8;
+}
+
+.copyright { padding-top: 1rem; }
 .copyright p { font-size: 0.8rem; color: #888; margin: 0.2rem 0; }
 #back-to-top { position: fixed; bottom: 20px; right: 20px; background-color: var(--primary-accent-color); color: white; border: none; width: 50px; height: 50px; border-radius: 50%; font-size: 1.2rem; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.2); opacity: 0; transform: translateY(100px); transition: opacity 0.3s ease, transform 0.3s ease; pointer-events: none; }
 #back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
