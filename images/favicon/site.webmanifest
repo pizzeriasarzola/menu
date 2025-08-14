@@ -1,40 +1,20 @@
 {
     "name": "Pizzeria S'Arzola",
     "short_name": "S'Arzola",
-    "description": "Menù Digitale",
-    "start_url": "/menu/",
-    "scope": "/menu/",
-    "display": "standalone",
-    "background_color": "#f4f4f2",
-    "theme_color": "#1a1a1a",
     "icons": [
         {
-            "src": "/menu/favicon/favicon-16x16.png",
-            "sizes": "16x16",
-            "type": "image/png"
-        },
-        {
-            "src": "/menu/favicon/favicon-32x32.png",
-            "sizes": "32x32",
-            "type": "image/png"
-        },
-        {
-            "src": "/menu/favicon/apple-touch-icon.png",
-            "sizes": "180x180",
-            "type": "image/png",
-            "purpose": "any"
-        },
-        {
-            "src": "/menu/favicon/android-chrome-192x192.png",
+            "src": "/favicon/android-chrome-192x192.png",
             "sizes": "192x192",
-            "type": "image/png",
-            "purpose": "any maskable"
+            "type": "image/png"
         },
         {
-            "src": "/menu/favicon/android-chrome-512x512.png",
+            "src": "/favicon/android-chrome-512x512.png",
             "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "any maskable"
+            "type": "image/png"
         }
-    ]
+    ],
+    "theme_color": "#E1A141",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "start_url": "/"
 }
