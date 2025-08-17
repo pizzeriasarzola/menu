@@ -239,6 +239,16 @@ body.scrolled #search-container {
 .modal-box h3 { font-family: 'Poppins', sans-serif; font-size: 1.8rem; margin: 0; }
 .modal-box p { color: #555; }
 .modal-box p.description { font-size: 1rem; margin: 0.5rem 0 1.5rem 0; }
+
+/* *** STILE AGGIUNTO PER IL PREZZO NEL MODAL *** */
+.modal-box #modal-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: right;
+    color: var(--text-color);
+    margin: 1rem 0;
+}
+
 #modal-allergens { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #ddd; }
 #modal-allergens h4 { margin-top: 0; font-weight: 600; color: var(--text-color); }
 #modal-allergens ul { list-style-type: none; padding: 0; margin: 0; font-size: 0.9rem; }

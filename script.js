@@ -101,10 +101,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 const modalImg = standardModal.querySelector('#modal-img');
                 const modalTitle = standardModal.querySelector('#modal-title');
                 const modalDescription = standardModal.querySelector('#modal-description');
+                // *** CODICE DECOMMENTATO E CORRETTO ***
+                const modalPrice = standardModal.querySelector('#modal-price');
                 const modalAllergens = standardModal.querySelector('#modal-allergens');
 
                 modalImg.src = itemElement.querySelector('img').src;
                 modalTitle.textContent = itemElement.querySelector('h3').textContent;
+                // *** QUESTA RIGA È STATA RIATTIVATA ***
+                modalPrice.textContent = itemElement.querySelector('.price').textContent;
                 
                 const currentLang = localStorage.getItem('preferredLanguage') || 'it';
                 const descriptionEl = itemElement.querySelector('.description');
