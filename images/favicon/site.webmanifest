@@ -1,8 +1,8 @@
 {
   "name": "Pizzeria S'Arzola - Menu",
   "short_name": "S'Arzola",
-  "start_url": "/menu/",
-  "scope": "/menu/",
+  "start_url": "..",
+  "scope": "..",
   "display": "standalone",
   "background_color": "#1a1a1a",
   "theme_color": "#1a1a1a",
