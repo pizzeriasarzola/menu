@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('search-input');
     const menuContent = document.getElementById('menu-content');
     const backToTopButton = document.getElementById('back-to-top');
-    const categoryNavigator = document.getElementById('category-navigator');
-    const navigatorContainer = document.getElementById('category-navigator-container');
     
     const menuSections = document.querySelectorAll('.menu-category-section');
     const navLinks = document.querySelectorAll('#category-navigator a');
@@ -22,6 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const vinoModal = document.getElementById('vino-modal-container');
     const amariModal = document.getElementById('amari-modal-container');
     const addonsModal = document.getElementById('addons-modal-container');
+    const pannaCottaModal = document.getElementById('panna-cotta-modal-container');
+    const cremaCatalanaModal = document.getElementById('crema-catalana-modal-container');
+    const tartufoBiancoModal = document.getElementById('tartufo-bianco-modal-container');
 
     // --- 2. IMPOSTAZIONI E DATI ---
     const settings = {
@@ -97,17 +98,18 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'vino-item': vinoModal?.classList.add('active'); break;
             case 'amari-item': amariModal?.classList.add('active'); break;
             case 'addons-item': addonsModal?.classList.add('active'); break;
+            case 'panna-cotta-item': pannaCottaModal?.classList.add('active'); break;
+            case 'crema-catalana-item': cremaCatalanaModal?.classList.add('active'); break;
+            case 'tartufo-bianco-item': tartufoBiancoModal?.classList.add('active'); break;
             default:
                 const modalImg = standardModal.querySelector('#modal-img');
                 const modalTitle = standardModal.querySelector('#modal-title');
                 const modalDescription = standardModal.querySelector('#modal-description');
-                // *** CODICE DECOMMENTATO E CORRETTO ***
                 const modalPrice = standardModal.querySelector('#modal-price');
                 const modalAllergens = standardModal.querySelector('#modal-allergens');
 
                 modalImg.src = itemElement.querySelector('img').src;
                 modalTitle.textContent = itemElement.querySelector('h3').textContent;
-                // *** QUESTA RIGA È STATA RIATTIVATA ***
                 modalPrice.textContent = itemElement.querySelector('.price').textContent;
                 
                 const currentLang = localStorage.getItem('preferredLanguage') || 'it';
@@ -139,7 +141,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- FUNZIONE PER PREZZI DINAMICI (CAFFÈ, BIRRA, VINO) ---
     function setupOptionSelectors() {
         const selectors = document.querySelectorAll('.size-selector');
         
@@ -167,7 +168,33 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 4. INIZIALIZZAZIONE DELL'OBSERVER PER LA NAVIGAZIONE ---
+    function setupPannaCottaModal() {
+        const modal = document.getElementById('panna-cotta-modal-container');
+        if (!modal) return;
+
+        const toppings = modal.querySelectorAll('#panna-cotta-toppings input[type="radio"]');
+        const addons = modal.querySelectorAll('#panna-cotta-addons input[type="checkbox"]');
+        const priceDisplay = modal.querySelector('#panna-cotta-price');
+
+        function updatePannaCottaPrice() {
+            const selectedTopping = modal.querySelector('#panna-cotta-toppings input[type="radio"]:checked');
+            let totalPrice = parseFloat(selectedTopping.dataset.price);
+
+            addons.forEach(addon => {
+                if (addon.checked) {
+                    totalPrice += parseFloat(addon.dataset.priceAdd);
+                }
+            });
+
+            priceDisplay.textContent = `€ ${totalPrice.toFixed(2).replace('.', ',')}`;
+        }
+
+        toppings.forEach(topping => topping.addEventListener('change', updatePannaCottaPrice));
+        addons.forEach(addon => addon.addEventListener('change', updatePannaCottaPrice));
+
+        updatePannaCottaPrice();
+    }
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -181,7 +208,6 @@ document.addEventListener('DOMContentLoaded', () => {
         rootMargin: `-${(stickyHeader?.offsetHeight || 100)}px 0px -50% 0px`
     });
 
-    // --- 5. COLLEGAMENTO DEGLI EVENTI ---
     if (searchInput) searchInput.addEventListener('input', handleSearch);
     if (backToTopButton) backToTopButton.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     langButtons.forEach(button => button.addEventListener('click', () => switchLanguage(button.dataset.lang)));
@@ -212,10 +238,10 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', handlePageScroll, { passive: true });
     window.addEventListener('resize', setBodyPadding);
 
-    // --- 6. ESECUZIONE INIZIALE ---
     menuSections.forEach(section => observer.observe(section));
     setBodyPadding();
     setupOptionSelectors();
+    setupPannaCottaModal();
     const preferredLanguage = localStorage.getItem('preferredLanguage') || 'it';
     switchLanguage(preferredLanguage);
 });
