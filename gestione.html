@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestione Disponibilità Menu - S'Arzola</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; background-color: #f4f4f2; }
+        h1, h2 { color: #1a1a1a; }
+        .category { background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .item { display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid #eee; }
+        .item:last-child { border-bottom: none; }
+        .item span { font-size: 1.1rem; }
+        .switch { position: relative; display: inline-block; width: 60px; height: 34px; }
+        .switch input { opacity: 0; width: 0; height: 0; }
+        .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 34px; }
+        .slider:before { position: absolute; content: ""; height: 26px; width: 26px; left: 4px; bottom: 4px; background-color: white; transition: .4s; border-radius: 50%; }
+        input:checked + .slider { background-color: #25D366; }
+        input:checked + .slider:before { transform: translateX(26px); }
+        #controls { margin-top: 2rem; background: white; padding: 1.5rem; border-radius: 8px; }
+        #controls input { width: 100%; padding: 0.8rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { background-color: #E1A141; color: white; padding: 1rem 1.5rem; border: none; border-radius: 8px; font-size: 1.2rem; cursor: pointer; width: 100%; transition: background-color 0.3s; }
+        button:hover { background-color: #c88d32; }
+        #status { margin-top: 1rem; text-align: center; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>🔧 Gestione Disponibilità Menu</h1>
+
+    <div id="controls">
+        <h2>Credenziali GitHub</h2>
+        <p>Incolla qui il tuo Personal Access Token per autorizzare le modifiche.</p>
+        <input type="password" id="github-token" placeholder="Incolla il tuo GitHub Token qui...">
+        <button id="save-button">Salva Modifiche su GitHub</button>
+        <p id="status"></p>
+    </div>
+
+    <div id="menu-management-list">
+        </div>
+
+    <script src="menu-data.js"></script>
+    <script>
+        // --- INIZIO SCRIPT DI GESTIONE ---
+        const GITHUB_USERNAME = "TUO_NOME_UTENTE_GITHUB"; // ⚠️ CAMBIA QUESTO
+        const GITHUB_REPO = "NOME_TUO_REPOSITORY"; // ⚠️ CAMBIA QUESTO
+        const FILE_PATH = "menu-data.js";
+
+        const menuListContainer = document.getElementById('menu-management-list');
+        const saveButton = document.getElementById('save-button');
+        const tokenInput = document.getElementById('github-token');
+        const statusEl = document.getElementById('status');
+
+        function renderManagementMenu() {
+            let html = "";
+            for (const categoryId in menuData) {
+                const categoryName = categoryId.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                html += `<div class="category"><h2>${categoryName}</h2>`;
+                menuData[categoryId].forEach((item, index) => {
+                    html += `
+                        <div class="item">
+                            <span>${item.nome}</span>
+                            <label class="switch">
+                                <input type="checkbox" id="item-${categoryId}-${index}" data-category="${categoryId}" data-index="${index}" ${item.disponibile ? 'checked' : ''}>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    `;
+                });
+                html += `</div>`;
+            }
+            menuListContainer.innerHTML = html;
+        }
+        
+        async function saveChanges() {
+            const token = tokenInput.value;
+            if (!token) {
+                alert("Per favore, inserisci il tuo GitHub Personal Access Token.");
+                return;
+            }
+
+            statusEl.textContent = "Salvataggio in corso...";
+            
+            // 1. Aggiorna l'oggetto menuData in memoria con lo stato degli interruttori
+            document.querySelectorAll('.switch input').forEach(toggle => {
+                const category = toggle.dataset.category;
+                const index = toggle.dataset.index;
+                menuData[category][index].disponibile = toggle.checked;
+            });
+            
+            // 2. Converte l'oggetto JS aggiornato in una stringa di testo per il file
+            // Usiamo JSON.stringify con una formattazione carina (spazi)
+            const newFileContent = "const menuData = " + JSON.stringify(menuData, null, 4) + ";";
+
+            // 3. Usa l'API di GitHub per aggiornare il file
+            try {
+                const GITHUB_API_URL = `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/contents/${FILE_PATH}`;
+
+                // A. Prima dobbiamo ottenere il "SHA" del file corrente (un ID della versione)
+                const fileInfoResponse = await fetch(GITHUB_API_URL, {
+                    headers: { 'Authorization': `token ${token}` }
+                });
+                const fileInfo = await fileInfoResponse.json();
+                const currentSha = fileInfo.sha;
+
+                // B. Ora inviamo il nuovo contenuto, il messaggio e lo SHA
+                const response = await fetch(GITHUB_API_URL, {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': `token ${token}`,
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        message: 'Aggiornamento disponibilità menu dal pannello di gestione',
+                        content: btoa(unescape(encodeURIComponent(newFileContent))), // Codifica in Base64
+                        sha: currentSha
+                    }),
+                });
+
+                if (response.ok) {
+                    statusEl.textContent = "✅ Modifiche salvate con successo! Il sito si aggiornerà tra pochi minuti.";
+                } else {
+                    const error = await response.json();
+                    throw new Error(error.message);
+                }
+            } catch (error) {
+                statusEl.textContent = `❌ Errore durante il salvataggio: ${error.message}`;
+                console.error("Errore:", error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', renderManagementMenu);
+        saveButton.addEventListener('click', saveChanges);
+        // --- FINE SCRIPT DI GESTIONE ---
+    </script>
+</body>
+</html>
