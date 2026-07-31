@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const allergenData = itemElement.dataset.allergens;
                 modalAllergens.innerHTML = '';
                 if (allergenData) {
-                    const allergenTitle = { it: "Allergeni:", en: "Allergens:", es: "Alérgenos:", fr: "Allergènes:" };
+                    const allergenTitle = { it: "Allergeni:", en: "Allergens:", es: "Alérgenos:", fr: "Allergènes:", de: "Allergene:"  };
                     let html = `<h4>${allergenTitle[currentLang]}</h4><ul>`;
                     allergenData.split(',').forEach(num => {
                         const key = num.trim();
