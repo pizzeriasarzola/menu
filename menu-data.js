@@ -6,7 +6,7 @@ const menuData = {
         {
             id: "antipasto-sarzola",
             nome: "S'Arzola",
-            immagine: "images/Antipasti/sarzola.jpg",
+            immagine: "images/Antipasti/sarzola.webp",
             descrizione: {
                 it: "Lardo, Pomodori secchi, Pancetta, Salsicce, Cipolline.",
                 en: "Lard, Sun-dried tomatoes, Bacon, Sausages, Onions.",
@@ -20,7 +20,7 @@ const menuData = {
         {
             id: "antipasto-terra",
             nome: "Terra",
-            immagine: "images/Antipasti/terra.jpg",
+            immagine: "images/Antipasti/terra.webp",
             descrizione: {
                 it: "Salsiccia, Prosciutto Crudo, Pancetta, Olive.",
                 en: "Sausage, Raw ham, Bacon, Olives.",
@@ -34,7 +34,7 @@ const menuData = {
         {
             id: "antipasto-mare",
             nome: "Mare",
-            immagine: "images/Antipasti/mare.jpg",
+            immagine: "images/Antipasti/mare.webp",
             descrizione: {
                 it: "Insalata mista di mare.",
                 en: "Mixed seafood salad.",
@@ -48,7 +48,7 @@ const menuData = {
         {
             id: "antipasto-frutti-di-bosco",
             nome: "Frutti di bosco",
-            immagine: "images/Antipasti/frutti_di_bosco.jpg",
+            immagine: "images/Antipasti/frutti_di_bosco.webp",
             descrizione: {
                 it: "Cipolline, Funghi porcini, Funghi chiodini, Funghi antunna.",
                 en: "Onions, Porcini mushrooms, Chiodini mushrooms, Antunna mushrooms.",
@@ -62,7 +62,7 @@ const menuData = {
         {
             id: "antipasto-degustazione",
             nome: "Degustazione",
-            immagine: "images/Antipasti/degustazione.jpg",
+            immagine: "images/Antipasti/degustazione.webp",
             descrizione: {
                 it: "Funghi misti, Affettati misti, Cipolline, Olive.",
                 en: "Mixed mushrooms, Mixed cold cuts, Onions, Olives.",
@@ -76,7 +76,7 @@ const menuData = {
         {
             id: "antipasto-patatine-fritte",
             nome: "Patatine Fritte",
-            immagine: "images/Antipasti/patatine_fritte.jpg",
+            immagine: "images/Antipasti/patatine_fritte.webp",
             descrizione: {
                 it: "Porzione di patatine fritte.",
                 en: "Portion of french fries.",
@@ -92,7 +92,7 @@ const menuData = {
         {
             id: "pizza-margherita",
             nome: "Margherita",
-            immagine: "images/Pizze classiche/margherita.jpg",
+            immagine: "images/Pizze classiche/margherita.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Basilico.",
                 en: "Tomato Sauce, Mozzarella, Basil.",
@@ -106,7 +106,7 @@ const menuData = {
         {
             id: "pizza-regina-margherita",
             nome: "Regina Margherita",
-            immagine: "images/Pizze classiche/regina_margherita.jpg",
+            immagine: "images/Pizze classiche/regina_margherita.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella di Bufala, Basilico.",
                 en: "Tomato Sauce, Buffalo Mozzarella, Basil.",
@@ -120,7 +120,7 @@ const menuData = {
         {
             id: "pizza-marinara",
             nome: "Marinara",
-            immagine: "images/Pizze classiche/marinara.jpg",
+            immagine: "images/Pizze classiche/marinara.webp",
             descrizione: {
                 it: "Pomodoro, Aglio, Origano.",
                 en: "Tomato Sauce, Garlic, Oregano.",
@@ -134,7 +134,7 @@ const menuData = {
         {
             id: "pizza-focaccia",
             nome: "Focaccia",
-            immagine: "images/Pizze classiche/focaccia.jpg",
+            immagine: "images/Pizze classiche/focaccia.webp",
             descrizione: {
                 it: "Olio, Sale.",
                 en: "Oil, Salt.",
@@ -148,7 +148,7 @@ const menuData = {
         {
             id: "pizza-bianca",
             nome: "Bianca",
-            immagine: "images/Pizze classiche/bianca.jpg",
+            immagine: "images/Pizze classiche/bianca.webp",
             descrizione: {
                 it: "Mozzarella.",
                 en: "Mozzarella.",
@@ -162,7 +162,7 @@ const menuData = {
         {
             id: "pizza-caprese",
             nome: "Caprese",
-            immagine: "images/Pizze classiche/caprese.jpg",
+            immagine: "images/Pizze classiche/caprese.webp",
             descrizione: {
                 it: "Mozzarella di bufala, Pomodori, Basilico.",
                 en: "Buffalo mozzarella, Tomatoes, Basil.",
@@ -176,7 +176,7 @@ const menuData = {
         {
             id: "pizza-diavola",
             nome: "Diavola",
-            immagine: "images/Pizze classiche/diavola.jpg",
+            immagine: "images/Pizze classiche/diavola.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Salsiccia piccante.",
                 en: "Tomato Sauce, Mozzarella, Spicy sausage.",
@@ -190,7 +190,7 @@ const menuData = {
         {
             id: "pizza-wurstel",
             nome: "Wurstel",
-            immagine: "images/Pizze classiche/wurstel.jpg",
+            immagine: "images/Pizze classiche/wurstel.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Wurstel.",
                 en: "Tomato Sauce, Mozzarella, Wurstel sausage.",
@@ -204,7 +204,7 @@ const menuData = {
         {
             id: "pizza-americana",
             nome: "Americana",
-            immagine: "images/Pizze classiche/americana.jpg",
+            immagine: "images/Pizze classiche/americana.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Würstel, Patatine fritte.",
                 en: "Tomato Sauce, Mozzarella, Wurstel sausage, French fries.",
@@ -218,7 +218,7 @@ const menuData = {
         {
             id: "pizza-patate",
             nome: "Patate",
-            immagine: "images/Pizze classiche/patate.jpg",
+            immagine: "images/Pizze classiche/patate.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Patate Fritte.",
                 en: "Tomato Sauce, Mozzarella, French fries.",
@@ -232,7 +232,7 @@ const menuData = {
         {
             id: "pizza-prosciutto-cotto",
             nome: "Prosciutto Cotto",
-            immagine: "images/Pizze classiche/prosciutto_cotto.jpg",
+            immagine: "images/Pizze classiche/prosciutto_cotto.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Prosciutto Cotto.",
                 en: "Tomato Sauce, Mozzarella, Cooked ham.",
@@ -246,7 +246,7 @@ const menuData = {
         {
             id: "pizza-prosciutto-crudo",
             nome: "Prosciutto Crudo",
-            immagine: "images/Pizze classiche/prosciutto_crudo.jpg",
+            immagine: "images/Pizze classiche/prosciutto_crudo.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Prosciutto Crudo.",
                 en: "Tomato Sauce, Mozzarella, Raw ham.",
@@ -260,7 +260,7 @@ const menuData = {
         {
             id: "pizza-salsiccia",
             nome: "Salsiccia",
-            immagine: "images/Pizze classiche/salsiccia.jpg",
+            immagine: "images/Pizze classiche/salsiccia.webp",
             descrizione: {
                 it: "Pomodoro, mozzarella, Salsiccia.",
                 en: "Tomato Sauce, Mozzarella, Sausage.",
@@ -274,7 +274,7 @@ const menuData = {
         {
             id: "pizza-pancetta",
             nome: "Pancetta",
-            immagine: "images/Pizze classiche/pancetta.jpg",
+            immagine: "images/Pizze classiche/pancetta.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Pancetta.",
                 en: "Tomato Sauce, Mozzarella, Bacon.",
@@ -288,7 +288,7 @@ const menuData = {
         {
             id: "pizza-napoletana",
             nome: "Napoletana",
-            immagine: "images/Pizze classiche/napoletana.jpg",
+            immagine: "images/Pizze classiche/napoletana.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Capperi, Acciughe.",
                 en: "Tomato Sauce, Mozzarella, Capers, Anchovies.",
@@ -302,7 +302,7 @@ const menuData = {
         {
             id: "pizza-acciughe",
             nome: "Acciughe",
-            immagine: "images/Pizze classiche/acciughe.jpg",
+            immagine: "images/Pizze classiche/acciughe.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Acciughe.",
                 en: "Tomato Sauce, Mozzarella, Anchovies.",
@@ -316,7 +316,7 @@ const menuData = {
         {
             id: "pizza-porcini",
             nome: "Porcini",
-            immagine: "images/Pizze classiche/porcini.jpg",
+            immagine: "images/Pizze classiche/porcini.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Porcini.",
                 en: "Tomato Sauce, Mozzarella, Porcini mushrooms.",
@@ -330,7 +330,7 @@ const menuData = {
         {
             id: "pizza-romana",
             nome: "Romana",
-            immagine: "images/Pizze classiche/romana.jpg",
+            immagine: "images/Pizze classiche/romana.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Acciughe, Origano.",
                 en: "Tomato Sauce, Mozzarella, Anchovies, Oregano.",
@@ -344,7 +344,7 @@ const menuData = {
         {
             id: "pizza-tonno-cipolle",
             nome: "Tonno Cipolle",
-            immagine: "images/Pizze classiche/tonno_cipolle.jpg",
+            immagine: "images/Pizze classiche/tonno_cipolle.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Tonno, Cipolle.",
                 en: "Tomato Sauce, Mozzarella, Tuna, Onions.",
@@ -358,7 +358,7 @@ const menuData = {
         {
             id: "pizza-funghi",
             nome: "Funghi",
-            immagine: "images/Pizze classiche/funghi.jpg",
+            immagine: "images/Pizze classiche/funghi.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Funghi.",
                 en: "Tomato Sauce, Mozzarella, Mushrooms.",
@@ -372,7 +372,7 @@ const menuData = {
         {
             id: "pizza-cotto-funghi",
             nome: "Cotto Funghi",
-            immagine: "images/Pizze classiche/cotto_funghi.jpg",
+            immagine: "images/Pizze classiche/cotto_funghi.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Prosciutto Cotto, Funghi.",
                 en: "Tomato Sauce, Mozzarella, Cooked ham, Mushrooms.",
@@ -386,7 +386,7 @@ const menuData = {
         {
             id: "pizza-tris-di-funghi",
             nome: "Tris di Funghi",
-            immagine: "images/Pizze classiche/tris_funghi.jpg",
+            immagine: "images/Pizze classiche/tris_funghi.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Antunna, Porcini, Prataioli.",
                 en: "Tomato Sauce, Mozzarella, Antunna, Porcini, Button mushrooms.",
@@ -400,7 +400,7 @@ const menuData = {
         {
             id: "pizza-completa",
             nome: "Completa",
-            immagine: "images/Pizze classiche/completa.jpg",
+            immagine: "images/Pizze classiche/completa.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Funghi,Prosciutto Cotto, Carciofi, Olive, Acciughe, Gorgonzola.",
                 en: "Tomato Sauce, Mozzarella, Mushrooms, Ham, Artichokes, Olives, Anchovies, Gorgonzola.",
@@ -414,7 +414,7 @@ const menuData = {
         {
             id: "pizza-capricciosa",
             nome: "Capricciosa",
-            immagine: "images/Pizze classiche/capricciosa.jpg",
+            immagine: "images/Pizze classiche/capricciosa.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Funghi, Purpedda, Uovo.",
                 en: "Tomato Sauce, Mozzarella, Mushrooms, Purpedda (minced meat), Egg.",
@@ -428,7 +428,7 @@ const menuData = {
         {
             id: "pizza-4-stagioni",
             nome: "4 Stagioni",
-            immagine: "images/Pizze classiche/4stagioni.jpg",
+            immagine: "images/Pizze classiche/4stagioni.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Cotto, Funghi, Würstel, Carciofi.",
                 en: "Tomato Sauce, Mozzarella, Ham, Mushrooms, Wurstel, Artichokes.",
@@ -442,7 +442,7 @@ const menuData = {
         {
             id: "pizza-4-formaggi",
             nome: "4 Formaggi",
-            immagine: "images/Pizze classiche/4formaggi.jpg",
+            immagine: "images/Pizze classiche/4formaggi.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Casizolu, Pecorino, Gorgonzola.",
                 en: "Tomato Sauce, Mozzarella, Casizolu cheese, Pecorino cheese, Gorgonzola.",
@@ -456,7 +456,7 @@ const menuData = {
         {
             id: "pizza-parigina",
             nome: "Parigina",
-            immagine: "images/Pizze classiche/parigina.jpg",
+            immagine: "images/Pizze classiche/parigina.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Panna, Prosciutto Crudo.",
                 en: "Tomato Sauce, Mozzarella, Cream, Ham.",
@@ -470,7 +470,7 @@ const menuData = {
         {
             id: "pizza-deliziosa",
             nome: "Deliziosa",
-            immagine: "images/Pizze classiche/deliziosa.jpg",
+            immagine: "images/Pizze classiche/deliziosa.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Speck, Pomodori, Grana.",
                 en: "Tomato Sauce, Mozzarella, Speck, Tomatoes, Grana cheese.",
@@ -484,7 +484,7 @@ const menuData = {
         {
             id: "pizza-speck",
             nome: "Speck",
-            immagine: "images/Pizze classiche/speck.jpg",
+            immagine: "images/Pizze classiche/speck.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Speck.",
                 en: "Tomato Sauce, Mozzarella, Speck.",
@@ -498,7 +498,7 @@ const menuData = {
         {
             id: "pizza-carciofi",
             nome: "Carciofi",
-            immagine: "images/Pizze classiche/carciofi.jpg",
+            immagine: "images/Pizze classiche/carciofi.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Carciofi.",
                 en: "Tomato Sauce, Mozzarella, Artichokes.",
@@ -512,7 +512,7 @@ const menuData = {
         {
             id: "pizza-gorgo",
             nome: "Gorgo",
-            immagine: "images/Pizze classiche/gorgo.jpg",
+            immagine: "images/Pizze classiche/gorgo.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Gorgonzola.",
                 en: "Tomato Sauce, Mozzarella, Gorgonzola.",
@@ -526,7 +526,7 @@ const menuData = {
         {
             id: "pizza-prataioli",
             nome: "Prataioli",
-            immagine: "images/Pizze classiche/prataioli.jpg",
+            immagine: "images/Pizze classiche/prataioli.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Prataioli.",
                 en: "Tomato Sauce, Mozzarella, Button mushrooms.",
@@ -540,7 +540,7 @@ const menuData = {
         {
             id: "pizza-calzone",
             nome: "Calzone",
-            immagine: "images/Pizze classiche/calzone.jpg",
+            immagine: "images/Pizze classiche/calzone.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Prosciutto Cotto, Funghi.",
                 en: "Tomato Sauce, Mozzarella, Cooked ham, Mushrooms.",
@@ -554,7 +554,7 @@ const menuData = {
         {
             id: "pizza-calzone-farcito",
             nome: "Calzone Farcito",
-            immagine: "images/Pizze classiche/calzone_farcito.jpg",
+            immagine: "images/Pizze classiche/calzone_farcito.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Prosciutto Cotto, Funghi, Würstel, Acciughe.",
                 en: "Tomato Sauce, Mozzarella, Cooked ham, Mushrooms, Wurstel, Anchovies.",
@@ -568,7 +568,7 @@ const menuData = {
         {
             id: "pizza-valtellinese",
             nome: "Valtellinese",
-            immagine: "images/Pizze classiche/valtellinese.jpg",
+            immagine: "images/Pizze classiche/valtellinese.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Bresaola, Rucola, Grana.",
                 en: "Tomato Sauce, Mozzarella, Bresaola, Arugula, Grana cheese.",
@@ -582,7 +582,7 @@ const menuData = {
         {
             id: "pizza-del-nonno",
             nome: "Del Nonno",
-            immagine: "images/Pizze classiche/delnonno.jpg",
+            immagine: "images/Pizze classiche/delnonno.webp",
             descrizione: {
                 it: "Mozzarella, Prosciutto Cotto.",
                 en: "Mozzarella, Cooked ham.",
@@ -598,7 +598,7 @@ const menuData = {
         {
             id: "bambini-topolino",
             nome: "Topolino",
-            immagine: "images/Pizze per bambini/topolino.jpg",
+            immagine: "images/Pizze per bambini/topolino.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Olive, Wurstel.",
                 en: "Tomato Sauce, Mozzarella, Olives, Wurstel sausage.",
@@ -612,7 +612,7 @@ const menuData = {
         {
             id: "bambini-simpson",
             nome: "Simpson",
-            immagine: "images/Pizze per bambini/simpson.jpg",
+            immagine: "images/Pizze per bambini/simpson.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Olive, Wurstel, Patatine fritte.",
                 en: "Tomato Sauce, Mozzarella, Olives, Wurstel sausage, French fries.",
@@ -626,7 +626,7 @@ const menuData = {
         {
             id: "bambini-sole",
             nome: "Sole",
-            immagine: "images/Pizze per bambini/sole.jpg",
+            immagine: "images/Pizze per bambini/sole.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Olive, Wurstel, Patatine fritte.",
                 en: "Tomato Sauce, Mozzarella, Olives, Wurstel sausage, French fries.",
@@ -640,7 +640,7 @@ const menuData = {
         {
             id: "bambini-stellina",
             nome: "Stellina",
-            immagine: "images/Pizze per bambini/stellina.jpg",
+            immagine: "images/Pizze per bambini/stellina.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Olive, Wurstel.",
                 en: "Tomato Sauce, Mozzarella, Olives, Wurstel sausage.",
@@ -654,7 +654,7 @@ const menuData = {
         {
             id: "bambini-delfino",
             nome: "Delfino",
-            immagine: "images/Pizze per bambini/delfino.jpg",
+            immagine: "images/Pizze per bambini/delfino.webp",
             descrizione: {
                 it: "Mozzarella.",
                 en: "Mozzarella.",
@@ -670,7 +670,7 @@ const menuData = {
         {
             id: "barbagia-burlardata",
             nome: "Burlardata",
-            immagine: "images/Pizze della Barbagia/burlardata.jpg",
+            immagine: "images/Pizze della Barbagia/burlardata.webp",
             descrizione: {
                 it: "Pomodoro, Burrata, Acciughe, Lardo, Pomodorini, Pepe, Basilico.",
                 en: "Tomato Sauce, Burrata, Anchovies, Lard, Cherry tomatoes, Pepper, Basil.",
@@ -684,7 +684,7 @@ const menuData = {
         {
             id: "barbagia-sarzola",
             nome: "S'Arzola",
-            immagine: "images/Pizze della Barbagia/sarzola.jpg",
+            immagine: "images/Pizze della Barbagia/sarzola.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Lardo, Cipolle, Pecorino, Pomodorini.",
                 en: "Tomato Sauce, Mozzarella, Lard, Onions, Pecorino cheese, Cherry tomatoes.",
@@ -698,7 +698,7 @@ const menuData = {
         {
             id: "barbagia-oroteddesa",
             nome: "Oroteddesa",
-            immagine: "images/Pizze della Barbagia/oroteddesa.jpg",
+            immagine: "images/Pizze della Barbagia/oroteddesa.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Purpedda, Lardo, Pilarda (Pomodori secchi), Pecorino.",
                 en: "Tomato Sauce, Mozzarella, Purpedda (minced meat), Lard, Pilarda (sun-dried tomatoes), Pecorino cheese.",
@@ -712,7 +712,7 @@ const menuData = {
         {
             id: "barbagia-massaiu",
             nome: "Massaiu",
-            immagine: "images/Pizze della Barbagia/massaiu.jpg",
+            immagine: "images/Pizze della Barbagia/massaiu.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Purpedda, Casizolu, Olive, Pomodorini.",
                 en: "Tomato Sauce, Mozzarella, Purpedda (minced meat), Casizolu cheese, Olives, Cherry tomatoes.",
@@ -726,7 +726,7 @@ const menuData = {
         {
             id: "barbagia-barbaricina",
             nome: "Barbaricina",
-            immagine: "images/Pizze della Barbagia/barbaricina.jpg",
+            immagine: "images/Pizze della Barbagia/barbaricina.webp",
             descrizione: {
                 it: "Pecorino piccante in uscita, Pomodori e Cipolle marinati in Olio E.V.O. e Aceto.",
                 en: "Spicy Pecorino added after baking, Tomatoes and Onions marinated in E.V.O. Oil and Vinegar.",
@@ -740,7 +740,7 @@ const menuData = {
         {
             id: "barbagia-nuoresa",
             nome: "Nuoresa",
-            immagine: "images/Pizze della Barbagia/nuoresa.jpg",
+            immagine: "images/Pizze della Barbagia/nuoresa.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Salsiccia, Casizolu.",
                 en: "Tomato Sauce, Mozzarella, Sausage, Casizolu cheese.",
@@ -754,7 +754,7 @@ const menuData = {
         {
             id: "barbagia-asparagi",
             nome: "Asparagi (Stagionale)",
-            immagine: "images/Pizze della Barbagia/asparagi.jpg",
+            immagine: "images/Pizze della Barbagia/asparagi.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Asparagi, Cipolla, Grana.",
                 en: "Tomato Sauce, Mozzarella, Asparagus, Onion, Grana cheese (Seasonal).",
@@ -768,7 +768,7 @@ const menuData = {
         {
             id: "barbagia-disizu",
             nome: "Disizu (Stagionale)",
-            immagine: "images/Pizze della Barbagia/disizu.jpg",
+            immagine: "images/Pizze della Barbagia/disizu.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Asparagi, Appara, Pecorino, Pancetta.",
                 en: "Tomato Sauce, Mozzarella, Asparagus, Appara mushrooms, Pecorino cheese, Bacon (Seasonal).",
@@ -782,7 +782,7 @@ const menuData = {
         {
             id: "barbagia-super-asparagi",
             nome: "Super Asparagi (Stagionale)",
-            immagine: "images/Pizze della Barbagia/superasparagi.jpg",
+            immagine: "images/Pizze della Barbagia/superasparagi.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Asparagi freschi.",
                 en: "Tomato Sauce, Mozzarella, Fresh asparagus (Seasonal).",
@@ -796,7 +796,7 @@ const menuData = {
         {
             id: "barbagia-porcini-freschi",
             nome: "Porcini Freschi (Stagionale)",
-            immagine: "images/Pizze della Barbagia/porcini_freschi.jpg",
+            immagine: "images/Pizze della Barbagia/porcini_freschi.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Porcini freschi.",
                 en: "Tomato Sauce, Mozzarella, Fresh porcini mushrooms (Seasonal).",
@@ -810,7 +810,7 @@ const menuData = {
         {
             id: "barbagia-carciofi-freschi",
             nome: "Carciofi Freschi (Stagionale)",
-            immagine: "images/Pizze della Barbagia/carciofi_freschi.jpg",
+            immagine: "images/Pizze della Barbagia/carciofi_freschi.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Carciofi freschi.",
                 en: "Tomato Sauce, Mozzarella, Fresh artichokes (Seasonal).",
@@ -826,7 +826,7 @@ const menuData = {
         {
             id: "gusti-pistacchiosa",
             nome: "Pistacchiosa",
-            immagine: "images/Gusti particolari/pistacchiosa.jpg",
+            immagine: "images/Gusti particolari/pistacchiosa.webp",
             descrizione: {
                 it: "Mozzarella di Bufala, Crema e granella di Pistacchio, Salmone Affumicato, Pepe Rosa, Olio E.V.O, Filetti di peperoncino.",
                 en: "Buffalo Mozzarella, Pistachio cream and grains, Smoked salmon, Pink pepper, E.V.O. oil, Chili pepper threads.",
@@ -840,7 +840,7 @@ const menuData = {
         {
             id: "gusti-orolai",
             nome: "Orolai",
-            immagine: "images/Gusti particolari/orolai.jpg",
+            immagine: "images/Gusti particolari/orolai.webp",
             descrizione: {
                 it: "Crema di Melanzane, Mozzarella di Bufala affumicata, Prosciutto Crudo, Pomodorini, Basilico.",
                 en: "Eggplant cream, Smoked Buffalo Mozzarella, Raw ham, Cherry tomatoes, Basil.",
@@ -854,7 +854,7 @@ const menuData = {
         {
             id: "gusti-eterna",
             nome: "L'Eterna",
-            immagine: "images/Gusti particolari/eterna.jpg",
+            immagine: "images/Gusti particolari/eterna.webp",
             descrizione: {
                 it: "Mozzarella di Bufala, Cacio e Pepe, Pancetta in Cottura, Cipolline Balsamiche.",
                 en: "Buffalo Mozzarella, Cacio e Pepe sauce, Baked bacon, Balsamic onions.",
@@ -868,7 +868,7 @@ const menuData = {
         {
             id: "gusti-vicu-rosa",
             nome: "Vicu Rosa",
-            immagine: "images/Gusti particolari/vicurosa.jpg",
+            immagine: "images/Gusti particolari/vicurosa.webp",
             descrizione: {
                 it: "Crema di Melanzane, Mozzarella Fior di Latte, Fichi, Prosciutto Crudo, Pomodorini Datterini, Basilico.",
                 en: "Eggplant cream, Fior di Latte Mozzarella, Figs, Raw ham, Datterini tomatoes, Basil.",
@@ -882,7 +882,7 @@ const menuData = {
         {
             id: "gusti-shardana",
             nome: "Shardana",
-            immagine: "images/Gusti particolari/shardana.jpg",
+            immagine: "images/Gusti particolari/shardana.webp",
             descrizione: {
                 it: "Impasto multicereali, Mozzarella di Bufala, Crema di Asparagi, Bottarga, Ricotta affumicata, Pilarda.",
                 en: "Multigrain dough, Buffalo Mozzarella, Asparagus cream, Bottarga (cured fish roe), Smoked ricotta, Pilarda (sun-dried tomatoes).",
@@ -896,7 +896,7 @@ const menuData = {
         {
             id: "gusti-pugliese",
             nome: "Pugliese",
-            immagine: "images/Gusti particolari/pugliese.jpg",
+            immagine: "images/Gusti particolari/pugliese.webp",
             descrizione: {
                 it: "Burrata, Pomodori, Acciughe, Pepe Nero, Basilico.",
                 en: "Burrata cheese, Tomatoes, Anchovies, Black pepper, Basil.",
@@ -910,7 +910,7 @@ const menuData = {
         {
             id: "gusti-la-sabry",
             nome: "La Sabry",
-            immagine: "images/Gusti particolari/lasabry.jpg",
+            immagine: "images/Gusti particolari/lasabry.webp",
             descrizione: {
                 it: "Impasto multicereali, Mozzarella di Bufala, Crema al Tartufo, Pilarda, Crema di Noci, Salsiccia di Cinghiale.",
                 en: "Multigrain dough, Buffalo Mozzarella, Truffle cream, Pilarda (sun-dried tomatoes), Walnut cream, Wild boar sausage.",
@@ -924,7 +924,7 @@ const menuData = {
         {
             id: "gusti-boscaiola",
             nome: "Boscaiola",
-            immagine: "images/Gusti particolari/boscaiola.jpg",
+            immagine: "images/Gusti particolari/boscaiola.webp",
             descrizione: {
                 it: "Mozzarella di Bufala, Gorgonzola, Porcini, Speck.",
                 en: "Buffalo Mozzarella, Gorgonzola, Porcini mushrooms, Speck.",
@@ -938,7 +938,7 @@ const menuData = {
         {
             id: "gusti-boscaiola-toscana",
             nome: "Boscaiola Toscana",
-            immagine: "images/Gusti particolari/boscaiola_toscana.jpg",
+            immagine: "images/Gusti particolari/boscaiola_toscana.webp",
             descrizione: {
                 it: "Impasto multicereali, Mozzarella, Zucchine, Carciofi, Prosciutto Crudo, Pecorino al Tartufo.",
                 en: "Multigrain dough, Mozzarella, Zucchini, Artichokes, Raw ham, Truffle Pecorino cheese.",
@@ -952,7 +952,7 @@ const menuData = {
         {
             id: "gusti-moreschina-sarda",
             nome: "Moreschina Sarda",
-            immagine: "images/Gusti particolari/moreschina_sarda.jpg",
+            immagine: "images/Gusti particolari/moreschina_sarda.webp",
             descrizione: {
                 it: "Impasto multicereali, Mozzarella di Bufala, Scamorza, Friarielli, Pilarda (Pomodori secchi), Pancetta.",
                 en: "Multigrain dough, Buffalo Mozzarella, Scamorza cheese, Friarielli (broccoli rabe), Pilarda (sun-dried tomatoes), Bacon.",
@@ -966,7 +966,7 @@ const menuData = {
         {
             id: "gusti-suprema",
             nome: "Suprema",
-            immagine: "images/Gusti particolari/suprema.jpg",
+            immagine: "images/Gusti particolari/suprema.webp",
             descrizione: {
                 it: "Impasto multicereali, Mozzarella di Bufala, Purpedda, Friarielli, Lardo, Pilarda (Pomodori secchi).",
                 en: "Multigrain dough, Buffalo Mozzarella, Purpedda (minced meat), Friarielli (broccoli rabe), Lard, Pilarda (sun-dried tomatoes).",
@@ -980,7 +980,7 @@ const menuData = {
         {
             id: "gusti-dolce-deciso",
             nome: "Dolce Deciso",
-            immagine: "images/Gusti particolari/dolce_deciso.jpg",
+            immagine: "images/Gusti particolari/dolce_deciso.webp",
             descrizione: {
                 it: "Impasto multicereali, Mozzarella, Melanzane grigliate, Casizolu, Friarielli, Lardo, Pilarda (Pomodori secchi).",
                 en: "Multigrain dough, Mozzarella, Grilled eggplants, Casizolu cheese, Friarielli (broccoli rabe), Lard, Pilarda (sun-dried tomatoes).",
@@ -994,7 +994,7 @@ const menuData = {
         {
             id: "gusti-afrodite",
             nome: "Afrodite (Stagionale)",
-            immagine: "images/Gusti particolari/afrodite.jpg",
+            immagine: "images/Gusti particolari/afrodite.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Fiori di Zucca, Carciofi, Pomodorini, Pecorino al tartufo.",
                 en: "Tomato Sauce, Mozzarella, courgette flowers, Artichokes, Cherry tomatoes, Truffle Pecorino cheese.",
@@ -1008,7 +1008,7 @@ const menuData = {
         {
             id: "gusti-golosa",
             nome: "Golosa",
-            immagine: "images/Gusti particolari/golosa.jpg",
+            immagine: "images/Gusti particolari/golosa.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Scamorza, Cipolle, Pomodorini.",
                 en: "Tomato Sauce, Mozzarella, Scamorza cheese, Onions, Cherry tomatoes.",
@@ -1022,7 +1022,7 @@ const menuData = {
         {
             id: "gusti-mediterranea",
             nome: "Mediterranea",
-            immagine: "images/Gusti particolari/mediterranea.jpg",
+            immagine: "images/Gusti particolari/mediterranea.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Prataioli, Peperoni, Gorgonzola, Rucola, Pomodorini.",
                 en: "Tomato Sauce, Mozzarella, Button mushrooms, Peppers, Gorgonzola, Arugula, Cherry tomatoes.",
@@ -1036,7 +1036,7 @@ const menuData = {
         {
             id: "gusti-contadina",
             nome: "Contadina",
-            immagine: "images/Gusti particolari/contadina.jpg",
+            immagine: "images/Gusti particolari/contadina.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Antunna, Olive, Pomodorini, Cipolline Balsamiche.",
                 en: "Tomato Sauce, Mozzarella, Antunna mushrooms, Olives, Cherry tomatoes, Balsamic onions.",
@@ -1050,7 +1050,7 @@ const menuData = {
         {
             id: "gusti-appetitosa",
             nome: "Appetitosa (Stagionale)",
-            immagine: "images/Gusti particolari/appetitosa.jpg",
+            immagine: "images/Gusti particolari/appetitosa.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Appara, Porcini, Gorgonzola, Pilarda (Pomodori secchi).",
                 en: "Tomato Sauce, Mozzarella, Appara mushrooms, Porcini, Gorgonzola, Pilarda (sun-dried tomatoes) (Seasonal).",
@@ -1064,7 +1064,7 @@ const menuData = {
         {
             id: "gusti-autunno",
             nome: "Autunno",
-            immagine: "images/Gusti particolari/autunno.jpg",
+            immagine: "images/Gusti particolari/autunno.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Salsiccia di Cinghiale, Chiodini, Crema di Formaggi.",
                 en: "Tomato Sauce, Mozzarella, Wild boar sausage, Chiodini mushrooms, Cheese cream.",
@@ -1078,7 +1078,7 @@ const menuData = {
         {
             id: "gusti-inverno",
             nome: "Inverno",
-            immagine: "images/Gusti particolari/inverno.jpg",
+            immagine: "images/Gusti particolari/inverno.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Salsiccia Piccante, Porcini, Crema di Formaggi.",
                 en: "Tomato Sauce, Mozzarella, Spicy sausage, Porcini mushrooms, Cheese cream.",
@@ -1092,7 +1092,7 @@ const menuData = {
         {
             id: "gusti-suocera",
             nome: "Suocera",
-            immagine: "images/Gusti particolari/suocera.jpg",
+            immagine: "images/Gusti particolari/suocera.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Salsiccia Piccante, Cipolle, Peperoni, Gorgonzola.",
                 en: "Tomato Sauce, Mozzarella, Spicy sausage, Onions, Peppers, Gorgonzola.",
@@ -1106,7 +1106,7 @@ const menuData = {
         {
             id: "gusti-cacciatora",
             nome: "Cacciatora",
-            immagine: "images/Gusti particolari/cacciatora.jpg",
+            immagine: "images/Gusti particolari/cacciatora.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Prataioli, Salsiccia di Cinghiale, Cipolle, Olive.",
                 en: "Tomato Sauce, Mozzarella, Button mushrooms, Wild boar sausage, Onions, Olives.",
@@ -1120,7 +1120,7 @@ const menuData = {
         {
             id: "gusti-mexicana",
             nome: "Mexicana",
-            immagine: "images/Gusti particolari/mexicana.jpg",
+            immagine: "images/Gusti particolari/mexicana.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Fagioli, Cipolle, Salsiccia Piccante, Pomodorini.",
                 en: "Tomato Sauce, Mozzarella, Beans, Onions, Spicy sausage, Cherry tomatoes.",
@@ -1134,7 +1134,7 @@ const menuData = {
         {
             id: "gusti-antunna",
             nome: "Antunna",
-            immagine: "images/Gusti particolari/antunna.jpg",
+            immagine: "images/Gusti particolari/antunna.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Funghi Antunna, Pancetta.",
                 en: "Tomato Sauce, Mozzarella, Antunna mushrooms, Bacon.",
@@ -1148,7 +1148,7 @@ const menuData = {
         {
             id: "gusti-bersagliera",
             nome: "Bersagliera",
-            immagine: "images/Gusti particolari/bersagliera.jpg",
+            immagine: "images/Gusti particolari/bersagliera.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Prataioli, Gorgonzola, Cipolle, Pilarda (Pomodori Secchi).",
                 en: "Tomato Sauce, Mozzarella, Button mushrooms, Gorgonzola, Onions, Pilarda (Sun-dried tomatoes).",
@@ -1162,7 +1162,7 @@ const menuData = {
         {
             id: "gusti-rustica",
             nome: "Rustica",
-            immagine: "images/Gusti particolari/rustica.jpg",
+            immagine: "images/Gusti particolari/rustica.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Pancetta, Peperoni, Cipolle, Carciofi.",
                 en: "Tomato Sauce, Mozzarella, Bacon, Peppers, Onions, Artichokes.",
@@ -1176,7 +1176,7 @@ const menuData = {
         {
             id: "gusti-campagnola",
             nome: "Campagnola",
-            immagine: "images/Gusti particolari/campagnola.jpg",
+            immagine: "images/Gusti particolari/campagnola.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Funghi Antunna, Pancetta, Pomodori.",
                 en: "Tomato Sauce, Mozzarella, Antunna mushrooms, Bacon, Tomatoes.",
@@ -1192,7 +1192,7 @@ const menuData = {
         {
             id: "mare-frutti-di-mare",
             nome: "Frutti di Mare",
-            immagine: "images/Pizze del mare/fruttimare.jpg",
+            immagine: "images/Pizze del mare/fruttimare.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Insalata mista di Mare.",
                 en: "Tomato Sauce, Mozzarella, Mixed seafood salad.",
@@ -1206,7 +1206,7 @@ const menuData = {
         {
             id: "mare-tris-mare",
             nome: "Tris Mare",
-            immagine: "images/Pizze del mare/tris_mare.jpg",
+            immagine: "images/Pizze del mare/tris_mare.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Cozze, Arselle, Insalata mista di Mare.",
                 en: "Tomato Sauce, Mozzarella, Mussels, Clams, Mixed seafood salad.",
@@ -1220,7 +1220,7 @@ const menuData = {
         {
             id: "mare-sa-tentassione",
             nome: "Sa Tentassione (Stagionale)",
-            immagine: "images/Pizze del mare/satentassione.jpg",
+            immagine: "images/Pizze del mare/satentassione.webp",
             descrizione: {
                 it: "Mozzarella di Bufala, Asparagi, Carciofi, Appara, Bottarga a scaglie.",
                 en: "Buffalo Mozzarella, Asparagus, Artichokes, Appara mushrooms, Bottarga flakes (Seasonal).",
@@ -1234,7 +1234,7 @@ const menuData = {
         {
             id: "mare-mari-e-monti",
             nome: "Mari e Monti",
-            immagine: "images/Pizze del mare/mari_monti.jpg",
+            immagine: "images/Pizze del mare/mari_monti.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Salsiccia, Cipolle, Insalata mista di Mare.",
                 en: "Tomato Sauce, Mozzarella, Sausage, Onions, Mixed seafood salad.",
@@ -1248,7 +1248,7 @@ const menuData = {
         {
             id: "mare-sfiziosa",
             nome: "Sfiziosa",
-            immagine: "images/Pizze del mare/sfiziosa.jpg",
+            immagine: "images/Pizze del mare/sfiziosa.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella di Bufala, Gamberetti, Funghi Porcini, Pomodori.",
                 en: "Tomato Sauce, Buffalo Mozzarella, Shrimps, Porcini mushrooms, Tomatoes.",
@@ -1262,7 +1262,7 @@ const menuData = {
         {
             id: "mare-bella-sardegna",
             nome: "Bella Sardegna",
-            immagine: "images/Pizze del mare/bella_sardegna.jpg",
+            immagine: "images/Pizze del mare/bella_sardegna.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella di Bufala, Aglio, Origano, Acciughe.",
                 en: "Tomato Sauce, Buffalo Mozzarella, Garlic, Oregano, Anchovies.",
@@ -1276,7 +1276,7 @@ const menuData = {
         {
             id: "mare-bottarga",
             nome: "Bottarga",
-            immagine: "images/Pizze del mare/bottarga.jpg",
+            immagine: "images/Pizze del mare/bottarga.webp",
             descrizione: {
                 it: "Mozzarella, Bottarga, Pomodorini.",
                 en: "Mozzarella, Bottarga (cured fish roe), Cherry tomatoes.",
@@ -1290,7 +1290,7 @@ const menuData = {
         {
             id: "mare-sandalion",
             nome: "Sandalion",
-            immagine: "images/Pizze del mare/sandalion.jpg",
+            immagine: "images/Pizze del mare/sandalion.webp",
             descrizione: {
                 it: "Mozzarella, Bottarga, Carciofi, Zucchine grigliate.",
                 en: "Mozzarella, Bottarga (cured fish roe), Artichokes, Grilled zucchini.",
@@ -1304,7 +1304,7 @@ const menuData = {
         {
             id: "mare-licanzia",
             nome: "Licanzia",
-            immagine: "images/Pizze del mare/licanzia.jpg",
+            immagine: "images/Pizze del mare/licanzia.webp",
             descrizione: {
                 it: "Mozzarella, Crema di Asparagi, Gamberetti, Gorgo, Pilarda.",
                 en: "Mozzarella, Asparagus cream, Shrimps, Gorgonzola, Pilarda (sun-dried tomatoes).",
@@ -1318,7 +1318,7 @@ const menuData = {
         {
             id: "mare-super-bottarga",
             nome: "Super Bottarga",
-            immagine: "images/Pizze del mare/super_bottarga.jpg",
+            immagine: "images/Pizze del mare/super_bottarga.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Bottarga a scaglie.",
                 en: "Tomato Sauce, Mozzarella, Bottarga flakes.",
@@ -1332,7 +1332,7 @@ const menuData = {
         {
             id: "mare-brezza-marina",
             nome: "Brezza Marina",
-            immagine: "images/Pizze del mare/brezza_marina.jpg",
+            immagine: "images/Pizze del mare/brezza_marina.webp",
             descrizione: {
                 it: "Mozzarella di Bufala, Polpa di Ricci Freschi, Bottarga a scaglie, Pomodorini, Basilico.",
                 en: "Buffalo Mozzarella, Fresh sea urchin pulp, Bottarga flakes, Cherry tomatoes, Basil.",
@@ -1348,7 +1348,7 @@ const menuData = {
         {
             id: "vegetariana-parmigiana",
             nome: "Parmigiana",
-            immagine: "images/Pizze vegetariane/parmigiana.jpg",
+            immagine: "images/Pizze vegetariane/parmigiana.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Melanzane grigliate, Grana.",
                 en: "Tomato Sauce, Mozzarella, Grilled eggplants, Grana cheese.",
@@ -1362,7 +1362,7 @@ const menuData = {
         {
             id: "vegetariana-vegetariana",
             nome: "Vegetariana",
-            immagine: "images/Pizze vegetariane/vegetariana.jpg",
+            immagine: "images/Pizze vegetariane/vegetariana.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Melanzane, Peperoni, Zucchine, Radicchio.",
                 en: "Tomato Sauce, Mozzarella, Eggplants, Peppers, Zucchini, Radicchio.",
@@ -1376,7 +1376,7 @@ const menuData = {
         {
             id: "vegetariana-griglie",
             nome: "Grigliè",
-            immagine: "images/Pizze vegetariane/grigliè.jpg",
+            immagine: "images/Pizze vegetariane/grigliè.webp",
             descrizione: {
                 it: "Pomodoro, Mozzarella, Melanzane, Peperoni, Zucchine grigliate.",
                 en: "Tomato Sauce, Mozzarella, Eggplants, Peppers, Grilled zucchini.",
@@ -1390,7 +1390,7 @@ const menuData = {
         {
             id: "vegetariana-poker-di-verdure",
             nome: "Poker di Verdure",
-            immagine: "images/Pizze vegetariane/poker_verdure.jpg",
+            immagine: "images/Pizze vegetariane/poker_verdure.webp",
             descrizione: {
                 it: "Mozzarella, Friarielli, Rucola, Radicchio, Pomodorini.",
                 en: "Mozzarella, Friarielli (broccoli rabe), Arugula, Radicchio, Cherry tomatoes.",
@@ -1404,7 +1404,7 @@ const menuData = {
         {
             id: "vegetariana-italia",
             nome: "Italia",
-            immagine: "images/Pizze vegetariane/italia.jpg",
+            immagine: "images/Pizze vegetariane/italia.webp",
             descrizione: {
                 it: "Mozzarella, Pomodori, Rucola, Grana.",
                 en: "Mozzarella, Tomatoes, Arugula, Grana cheese.",
@@ -1418,7 +1418,7 @@ const menuData = {
         {
             id: "vegetariana-ptz",
             nome: "P.T.Z.",
-            immagine: "images/Pizze vegetariane/ptz.jpg",
+            immagine: "images/Pizze vegetariane/ptz.webp",
             descrizione: {
                 it: "Mozzarella di Bufala, Friarielli, Pomodorini.",
                 en: "Buffalo Mozzarella, Friarielli (broccoli rabe), Cherry tomatoes.",
@@ -1432,7 +1432,7 @@ const menuData = {
         {
             id: "vegetariana-della-nonna",
             nome: "Della Nonna",
-            immagine: "images/Pizze vegetariane/della_nonna.jpg",
+            immagine: "images/Pizze vegetariane/della_nonna.webp",
             descrizione: {
                 it: "Mozzarella, Melanzane, Pomodorini, Rucola.",
                 en: "Mozzarella, Eggplants, Cherry tomatoes, Arugula.",
@@ -1446,7 +1446,7 @@ const menuData = {
         {
             id: "vegetariana-italia-2",
             nome: "Italia 2",
-            immagine: "images/Pizze vegetariane/italia2.jpg",
+            immagine: "images/Pizze vegetariane/italia2.webp",
             descrizione: {
                 it: "Doppia Mozzarella, Rucola, Pilarda (Pomodori secchi).",
                 en: "Double Mozzarella, Arugula, Pilarda (sun-dried tomatoes).",
@@ -1460,7 +1460,7 @@ const menuData = {
         {
             id: "vegetariana-primavera",
             nome: "Primavera",
-            immagine: "images/Pizze vegetariane/primavera.jpg",
+            immagine: "images/Pizze vegetariane/primavera.webp",
             descrizione: {
                 it: "Mozzarella, Rucola, Radicchio, Grana.",
                 en: "Mozzarella, Arugula, Radicchio, Grana cheese.",
@@ -1474,7 +1474,7 @@ const menuData = {
         {
             id: "vegetariana-trevigiana",
             nome: "Trevigiana",
-            immagine: "images/Pizze vegetariane/trevigiana.jpg",
+            immagine: "images/Pizze vegetariane/trevigiana.webp",
             descrizione: {
                 it: "Mozzarella, Zucchine, Pomodorini, Radicchio.",
                 en: "Mozzarella, Zucchini, Cherry tomatoes, Radicchio.",
@@ -1488,7 +1488,7 @@ const menuData = {
         {
             id: "vegetariana-estate",
             nome: "Estate",
-            immagine: "images/Pizze vegetariane/estate.jpg",
+            immagine: "images/Pizze vegetariane/estate.webp",
             descrizione: {
                 it: "Mozzarella, Cipolla, Pomodori, Rucola, Zucchine.",
                 en: "Mozzarella, Onion, Tomatoes, Arugula, Zucchini.",
@@ -1504,7 +1504,7 @@ const menuData = {
         {
             id: "birra-ichnusa",
             nome: "Ichnusa",
-            immagine: "images/Bevande/ichnusa.jpg",
+            immagine: "images/Bevande/ichnusa.webp",
             descrizione: {
                 it: "Bottiglia da 66 cl.",
                 en: "66 cl bottle.",
@@ -1518,7 +1518,7 @@ const menuData = {
         {
             id: "birra-ichnusa-non-filtrata",
             nome: "Ichnusa non filtrata",
-            immagine: "images/Bevande/ichnusa_nonfiltrata.jpg",
+            immagine: "images/Bevande/ichnusa_nonfiltrata.webp",
             descrizione: {
                 it: "Bottiglia da 33 cl.",
                 en: "33 cl bottle.",
@@ -1532,7 +1532,7 @@ const menuData = {
         {
             id: "birra-becks",
             nome: "Beck's",
-            immagine: "images/Bevande/becks.jpg",
+            immagine: "images/Bevande/becks.webp",
             descrizione: {
                 it: "Bottiglia da 33 cl.",
                 en: "33 cl bottle.",
@@ -1546,7 +1546,7 @@ const menuData = {
         {
             id: "birra-heineken",
             nome: "Heineken",
-            immagine: "images/Bevande/heineken.jpg",
+            immagine: "images/Bevande/heineken.webp",
             descrizione: {
                 it: "Bottiglia da 33 cl.",
                 en: "33 cl bottle.",
@@ -1560,7 +1560,7 @@ const menuData = {
         {
             id: "birra-senza-glutine",
             nome: "Birra senza glutine",
-            immagine: "images/Bevande/birranoglu.jpg",
+            immagine: "images/Bevande/birranoglu.webp",
             descrizione: {
                 it: "Daura o Peroni, 33 cl.",
                 en: "Daura or Peroni (Gluten Free), 33 cl.",
@@ -1576,7 +1576,7 @@ const menuData = {
         {
             id: "bibita-acqua-naturale",
             nome: "Acqua Naturale",
-            immagine: "images/Bevande/acqua.jpg",
+            immagine: "images/Bevande/acqua.webp",
             descrizione: {
                 it: "Acqua microfiltrata. Bottiglia da 0,75 l.",
                 en: "Purified. 0.75 l bottle",
@@ -1590,7 +1590,7 @@ const menuData = {
         {
             id: "bibita-acqua-frizzante",
             nome: "Acqua Frizzante",
-            immagine: "images/Bevande/smeraldina.jpg",
+            immagine: "images/Bevande/smeraldina.webp",
             descrizione: {
                 it: "Bottiglia da 0,5 l",
                 en: "0.5 l bottle",
@@ -1604,7 +1604,7 @@ const menuData = {
         {
             id: "bibita-coca-cola",
             nome: "Coca Cola",
-            immagine: "images/Bevande/cocacola.jpg",
+            immagine: "images/Bevande/cocacola.webp",
             descrizione: {
                 it: "Bottiglia in vetro da 33 cl.",
                 en: "33 cl glass bottle.",
@@ -1618,7 +1618,7 @@ const menuData = {
         {
             id: "bibita-sprite",
             nome: "Sprite",
-            immagine: "images/Bevande/sprite.jpg",
+            immagine: "images/Bevande/sprite.webp",
             descrizione: {
                 it: "Bottiglia in vetro da 33 cl.",
                 en: "33 cl glass bottle.",
@@ -1632,7 +1632,7 @@ const menuData = {
         {
             id: "bibita-fanta",
             nome: "Fanta",
-            immagine: "images/Bevande/fanta.jpg",
+            immagine: "images/Bevande/fanta.webp",
             descrizione: {
                 it: "Bottiglia in vetro da 33 cl.",
                 en: "33 cl glass bottle.",
@@ -1646,7 +1646,7 @@ const menuData = {
         {
             id: "bibita-the-freddo",
             nome: "Thè Freddo",
-            immagine: "images/Bevande/the.jpg",
+            immagine: "images/Bevande/the.webp",
             descrizione: {
                 it: "Thè alla Pesca, Bottiglia in vetro da 33 cl.",
                 en: "Peach Iced Tea, 33 cl glass bottle.",
@@ -1662,7 +1662,7 @@ const menuData = {
         {
             id: "dolce-tiramisu",
             nome: "Tiramisu della casa",
-            immagine: "images/Dolci/tiramisu.jpg",
+            immagine: "images/Dolci/tiramisu.webp",
             descrizione: { it: "", en: "", es: "", fr: "" },
             prezzo: "5,00",
             allergeni: "",
@@ -1671,7 +1671,7 @@ const menuData = {
         {
             id: "dolce-croccante-pistacchio",
             nome: "Croccante Pistacchio",
-            immagine: "images/Dolci/croccante_pistacchio.jpg",
+            immagine: "images/Dolci/croccante_pistacchio.webp",
             descrizione: { it: "", en: "", es: "", fr: "" },
             prezzo: "6,20",
             allergeni: "",
@@ -1680,7 +1680,7 @@ const menuData = {
         {
             id: "dolce-croccante-amarena",
             nome: "Croccante Amarena",
-            immagine: "images/Dolci/croccante_amarena.jpg",
+            immagine: "images/Dolci/croccante_amarena.webp",
             descrizione: { it: "", en: "", es: "", fr: "" },
             prezzo: "6,20",
             allergeni: "",
@@ -1689,7 +1689,7 @@ const menuData = {
         {
             id: "dolce-crema-caffe",
             nome: "Crema Caffè",
-            immagine: "images/Dolci/crema_caffe.jpg",
+            immagine: "images/Dolci/crema_caffe.webp",
             descrizione: { it: "", en: "", es: "", fr: "" },
             prezzo: "3,50",
             allergeni: "",
@@ -1698,7 +1698,7 @@ const menuData = {
         {
             id: "dolce-sorbetto-limone",
             nome: "Sorbetto al limone",
-            immagine: "images/Dolci/sorbetto.jpg",
+            immagine: "images/Dolci/sorbetto.webp",
             descrizione: { it: "", en: "", es: "", fr: "" },
             prezzo: "3,50",
             allergeni: "",
@@ -1707,7 +1707,7 @@ const menuData = {
         {
             id: "dolce-gelato-stracciatella",
             nome: "Gelato Stracciatella",
-            immagine: "images/Dolci/stracciatella.jpg",
+            immagine: "images/Dolci/stracciatella.webp",
             descrizione: { it: "", en: "", es: "", fr: "" },
             prezzo: "6,00",
             allergeni: "",
@@ -1716,7 +1716,7 @@ const menuData = {
         {
             id: "dolce-gelato-cocco",
             nome: "Gelato al Cocco",
-            immagine: "images/Dolci/cocco.jpg",
+            immagine: "images/Dolci/cocco.webp",
             descrizione: { it: "", en: "", es: "", fr: "" },
             prezzo: "6,00",
             allergeni: "",
@@ -1725,7 +1725,7 @@ const menuData = {
         {
             id: "dolce-gelato-panna-amarena",
             nome: "Gelato Panna e Amarena",
-            immagine: "images/Dolci/panna_amarena.jpg",
+            immagine: "images/Dolci/panna_amarena.webp",
             descrizione: { it: "", en: "", es: "", fr: "" },
             prezzo: "6,00",
             allergeni: "",
@@ -1734,7 +1734,7 @@ const menuData = {
         {
             id: "dolce-gelato-pistacchio",
             nome: "Gelato al Pistacchio",
-            immagine: "images/Dolci/pistacchio.jpg",
+            immagine: "images/Dolci/pistacchio.webp",
             descrizione: { it: "", en: "", es: "", fr: "" },
             prezzo: "6,00",
             allergeni: "",
@@ -1743,7 +1743,7 @@ const menuData = {
         {
             id: "dolce-gelato-mango",
             nome: "Gelato al Mango",
-            immagine: "images/Dolci/mango.jpg",
+            immagine: "images/Dolci/mango.webp",
             descrizione: { it: "", en: "", es: "", fr: "" },
             prezzo: "6,00",
             allergeni: "",
@@ -1752,7 +1752,7 @@ const menuData = {
         {
             id: "dolce-gelato-cioccolato-bianco",
             nome: "Gelato al Cioccolato Bianco",
-            immagine: "images/Dolci/cioccolato_bianco.jpg",
+            immagine: "images/Dolci/cioccolato_bianco.webp",
             descrizione: {
                 it: "Gelato da bere",
                 en: "Drinkable ice cream",
